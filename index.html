@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhã Hiên</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="site-header__brand" href="#home">
+      <img src="img/logo.png" alt="Nhã Hiên">
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="site-nav__link is-active" href="#home" aria-current="page">Home</a>
+      <a class="site-nav__link" href="#services">Experience</a>
+      <a class="site-nav__link" href="#about">Our Story</a>
+      <a class="site-nav__link" href="#contact">Membership</a>
+      <a class="site-nav__link" href="#partners">Our Partners</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section section--dark hero-section" id="home">
+      <div class="hero-banner">
+        <img class="hero-banner__image" src="img/banner.jpg" alt="Sunlit garden terrace surrounded by greenery">
+        <div class="hero-banner__content">
+          <div class="hero-banner__main">
+            <div class="hero-banner__heading">
+              <p class="hero-banner__brand">Nhã Hiên</p>
+              <h1 class="hero-banner__title">"Business motto goes here"</h1>
+            </div>
+            <a class="button button--primary hero-banner__button" href="#contact">Book An Experience</a>
+          </div>
+          <div class="hero-banner__links">
+            <a class="button button--outline hero-banner__button" href="#services">Explore Experiences</a>
+            <a class="button button--outline hero-banner__button" href="#about">Discover Nhã Hiên</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+      <div class="about-section__grid reveal">
+        <div class="about-section__body">
+          <p class="about-section__eyebrow">Welcome to Nhã Hiên</p>
+          <h2 class="about-section__title">A space for living life to the fullest.</h2>
+          <p class="about-section__text">
+            We believe that every stage of life brings new opportunities. Nhã Hiên brings people together through
+            thoughtfully curated activities, lifelong learning and joyful everyday experiences.
+          </p>
+        </div>
+        <div class="about-section__media">
+          <img src="img/about.jpg" alt="People sharing a tea and flower arranging activity">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section--dark reveal" id="services">
+      <h2 class="section__title section__title--centered">What we offer</h2>
+      <ul class="service-list">
+        <li class="service-list__item">Service one</li>
+        <li class="service-list__item">Service two</li>
+        <li class="service-list__item">Service three</li>
+      </ul>
+    </section>
+
+    <!-- Team -->
+    <section class="section section--light team-section" id="team">
+      <h2 class="section__title section__title--centered">Our team</h2>
+      <div class="team-section__grid">
+        <div class="placeholder placeholder--round">Image</div>
+        <div class="team-section__content">
+          <p>Placeholder paragraph about the team's background.</p>
+          <p>Placeholder paragraph about their experience.</p>
+          <p>Placeholder paragraph about what drives them.</p>
+        </div>
+        <div class="placeholder placeholder--round">Image</div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section section--dark section--narrow">
+      <h2 class="section__title section__title--centered">Why choose us</h2>
+      <ul class="benefit-list">
+        <li class="benefit-list__item">Benefit one</li>
+        <li class="benefit-list__item">Benefit two</li>
+        <li class="benefit-list__item">Benefit three</li>
+        <li class="benefit-list__item">Benefit four</li>
+      </ul>
+    </section>
+
+    <!-- Partners / testimonials -->
+    <section class="section section--light testimonial-section" id="partners">
+      <h2 class="section__title">Our partners</h2>
+      <figure class="testimonial">
+        <blockquote class="testimonial__quote">Placeholder quote. One or two sentences from a partner or client.
+        </blockquote>
+        <figcaption class="testimonial__author">
+          Partner Name
+          <span class="testimonial__role">Role or company</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--dark booking-section" id="contact">
+      <h2 class="section__title section__title--centered">Book now</h2>
+      <p class="section__lead">Fill in the form and we will contact you.</p>
+      <div class="booking-section__grid">
+        <div class="placeholder placeholder--small">Image</div>
+        <form class="booking-form">
+          <label class="booking-form__field">Full name
+            <input class="booking-form__input" type="text" name="name">
+          </label>
+          <label class="booking-form__field">Phone
+            <input class="booking-form__input" type="tel" name="phone">
+          </label>
+          <label class="booking-form__field">Email
+            <input class="booking-form__input" type="email" name="email">
+          </label>
+          <button class="button button--primary" type="submit">Send</button>
+        </form>
+        <div class="placeholder placeholder--small">Image</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Snoopy</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
