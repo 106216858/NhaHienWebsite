@@ -41,24 +41,3 @@ if (form) {
         form.reset();
     });
 }
-
-// Highlight the active nav link while scrolling
-const navLinks = document.querySelectorAll(".site-nav__link");
-const sections = [...navLinks]
-    .map((l) => document.querySelector(l.getAttribute("href")))
-    .filter(Boolean);
-const navObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            navLinks.forEach((l) => {
-                const active = l.getAttribute("href") === "#" + entry.target.id;
-                l.classList.toggle("is-active", active);
-                if (active) l.setAttribute("aria-current", "page");
-                else l.removeAttribute("aria-current");
-            });
-        });
-    },
-    { rootMargin: "-40% 0px -55% 0px" }
-);
-sections.forEach((s) => navObserver.observe(s));
