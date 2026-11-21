@@ -11,10 +11,10 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico?v=1" sizes="48x48">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=1">
-  <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png?v=1">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=1">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -116,7 +116,7 @@
     <section class="community" id="philosophy">
       <div class="community__grid">
         <div class="community__photo reveal">
-          <img src="img/grandmas.jpg" alt="Two women laughing together" loading="lazy">
+          <img src="img/grandmas.jpeg" alt="Two women laughing together" loading="lazy">
         </div>
         <div class="community__content reveal" style="--delay:.1s">
           <p class="community__eyebrow">More than a place</p>
@@ -211,69 +211,70 @@
         <img src="img/grandma_plant.jpeg" alt="Woman enjoying gardening in a community garden" loading="lazy">
       </div>
     </section>
-
-    <!-- Partners -->
-    <section class="partners" id="partners">
-      <div class="partners__inner reveal">
-        <p class="eyebrow">Our partners</p>
-        <figure class="quote">
-          <blockquote class="quote__text">Placeholder quote. One or two sentences from a partner or client.</blockquote>
-          <figcaption class="quote__author">Partner Name <span>Role or company</span></figcaption>
-        </figure>
-        <ul class="partners__logos" aria-label="Partner logos">
-          <li>Partner one</li>
-          <li>Partner two</li>
-          <li>Partner three</li>
-          <li>Partner four</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Booking -->
-    <section class="booking" id="contact">
-      <div class="booking__grid reveal">
-        <div class="booking__media">
-          <img src="img/tea.jpeg" alt="Tea tray with incense" loading="lazy">
-        </div>
-        <div class="booking__panel">
-          <p class="eyebrow eyebrow--light">Book now</p>
-          <h2 class="booking__title">Reserve your experience.</h2>
-          <p class="booking__lead">Leave your details and we will contact you to confirm.</p>
-          <form class="booking-form" id="booking-form" novalidate>
-            <label class="field">
-              <span>Full name</span>
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label class="field">
-              <span>Phone</span>
-              <input type="tel" name="phone" autocomplete="tel" required>
-            </label>
-            <label class="field">
-              <span>Email</span>
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <label class="field">
-              <span>Experience</span>
-              <select name="experience">
-                <option value="">Select an experience</option>
-                <option>Art Studio</option>
-                <option>Baking Circle</option>
-                <option>Board Games</option>
-                <option>Flower Arranging</option>
-                <option>Garden Meditation</option>
-                <option>Tea Ceremony</option>
-              </select>
-            </label>
-            <button class="button button--primary booking-form__submit" type="submit">Send request</button>
-            <p class="booking-form__status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 Snoopy</p>
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" aria-label="Nhã Hiên home">
+          <img class="site-footer__logo" src="img/logo.png" alt="Nhã Hiên">
+        </a>
+        <p class="site-footer__tagline">A space for new discoveries, meaningful connections and beautiful everyday
+          moments.</p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Explore">
+        <h2 class="site-footer__heading">Explore</h2>
+        <ul class="site-footer__links">
+          <li><a href="experience.html">Experiences</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="partner.html">Our Partners</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Visit us</h2>
+        <h3 class="site-footer__subheading">Address</h3>
+        <address class="site-footer__text">
+          A35 Bach Dang Street,<br>
+          Tan Son Hoa Ward, Ho Chi Minh City.
+        </address>
+        <h3 class="site-footer__subheading">Opening Hours</h3>
+        <p class="site-footer__text">Monday - Sunday (7a.m. - 10p.m.)</p>
+      </div>
+
+      <div class="site-footer__col" id="contact">
+        <h2 class="site-footer__heading">Contact us</h2>
+        <form class="footer-form" id="footer-form" novalidate>
+          <label class="visually-hidden" for="footer-email">Email address</label>
+          <input class="footer-form__input" id="footer-email" type="email" name="email" placeholder="Your email"
+            autocomplete="email" required>
+          <button class="footer-form__button" type="submit" aria-label="Send">&rarr;</button>
+        </form>
+        <p class="footer-form__status" role="status" aria-live="polite"></p>
+
+        <h2 class="site-footer__heading site-footer__heading--spaced">Follow us</h2>
+        <ul class="site-footer__social">
+          <li>
+            <a href="#" aria-label="Facebook"><img src="img/fb_logo.png" alt="" loading="lazy"></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram"><img src="img/ins_logo.png" alt="" loading="lazy"></a>
+          </li>
+          <li>
+            <a href="#" aria-label="TikTok"><img src="img/tiktok_logo.png" alt="" loading="lazy"></a>
+          </li>
+          <li>
+            <a href="#" aria-label="X"><img src="img/x_logo.png" alt="" loading="lazy"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Nhã Hiên. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="app.js"></script>
