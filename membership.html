@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership | Nhã Hiên</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="site-header__brand" href="index.html"><img src="img/logo.png" alt="Nhã Hiên"></a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="site-nav__link" href="index.html">Home</a>
+      <a class="site-nav__link" href="experience.html">Experiences</a>
+      <a class="site-nav__link" href="story.html">Our Story</a>
+      <a class="site-nav__link is-active" href="membership.html" aria-current="page">Membership</a>
+      <a class="site-nav__link" href="partner.html">Our Partners</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="page-hero__inner reveal">
+        <p class="page-hero__eyebrow">Your journey, your choice</p>
+        <h1 class="page-hero__title">Membership</h1>
+      </div>
+    </section>
+    <section class="page-content" aria-label="Membership introduction">
+      <div class="page-content__intro reveal">
+        <h2 class="page-content__title">A membership that fits your life.</h2>
+        <p class="page-content__text">Choose a single experience or begin a longer journey of learning, connection and
+          discovery.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" aria-label="Nhã Hiên home"><img class="site-footer__logo" src="img/logo.png" alt="Nhã Hiên"></a>
+        <p class="site-footer__tagline">A space for new discoveries, meaningful connections and beautiful everyday moments.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Explore">
+        <h2 class="site-footer__heading">Explore</h2>
+        <ul class="site-footer__links">
+          <li><a href="experience.html">Experiences</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="partner.html">Our Partners</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Visit us</h2>
+        <h3 class="site-footer__subheading">Address</h3>
+        <address class="site-footer__text">A35 Bach Dang Street,<br>Tan Son Hoa Ward, Ho Chi Minh City.</address>
+        <h3 class="site-footer__subheading">Opening Hours</h3>
+        <p class="site-footer__text">Monday - Sunday (7a.m. - 10p.m.)</p>
+      </div>
+      <div class="site-footer__col" id="contact">
+        <h2 class="site-footer__heading">Contact us</h2>
+        <form class="footer-form" id="footer-form" novalidate>
+          <label class="visually-hidden" for="footer-email">Email address</label>
+          <input class="footer-form__input" id="footer-email" type="email" name="email" placeholder="Your email" autocomplete="email" required>
+          <button class="footer-form__button" type="submit" aria-label="Send">&rarr;</button>
+        </form>
+        <p class="footer-form__status" role="status" aria-live="polite"></p>
+        <h2 class="site-footer__heading site-footer__heading--spaced">Follow us</h2>
+        <ul class="site-footer__social">
+          <li><a href="#" aria-label="Facebook"><img src="img/fb_logo.png" alt="" loading="lazy"></a></li>
+          <li><a href="#" aria-label="Instagram"><img src="img/ins_logo.png" alt="" loading="lazy"></a></li>
+          <li><a href="#" aria-label="TikTok"><img src="img/tiktok_logo.png" alt="" loading="lazy"></a></li>
+          <li><a href="#" aria-label="X"><img src="img/x_logo.png" alt="" loading="lazy"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom"><p>&copy; 2026 Nhã Hiên. All rights reserved.</p></div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -36,3 +36,38 @@ if (footerForm) {
         footerForm.reset();
     });
 }
+
+// Experiences filter buttons (one active at a time, deep-linkable via #hash)
+const expButtons = document.querySelectorAll(".exp-filter__btn");
+if (expButtons.length) {
+    const setFilter = (name) => {
+        const target = [...expButtons].find((b) => b.dataset.filter === name) || expButtons[0];
+        expButtons.forEach((b) => {
+            const on = b === target;
+            b.classList.toggle("is-active", on);
+            b.setAttribute("aria-pressed", on);
+        });
+        // Show only the cards in the chosen category
+        const cards = document.querySelectorAll(".exp-card");
+        let visible = 0;
+        cards.forEach((card) => {
+            const show = target.dataset.filter === "all" || card.dataset.category === target.dataset.filter;
+            card.hidden = !show;
+            if (show) visible++;
+        });
+        const empty = document.getElementById("exp-empty");
+        if (empty) empty.hidden = visible > 0;
+    };
+
+    expButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            setFilter(btn.dataset.filter);
+            history.replaceState(null, "", btn.dataset.filter === "all" ? location.pathname : "#" + btn.dataset.filter);
+        });
+    });
+
+    // Select the right button when arriving from a homepage tile (experience.html#arts)
+    const fromHash = () => setFilter(location.hash.slice(1));
+    fromHash();
+    window.addEventListener("hashchange", fromHash);
+}
