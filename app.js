@@ -18,3 +18,47 @@ const header = document.querySelector(".site-header");
 const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 10);
 onScroll();
 window.addEventListener("scroll", onScroll, { passive: true });
+
+
+// Booking form validation
+const form = document.getElementById("booking-form");
+if (form) {
+    const status = form.querySelector(".booking-form__status");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let valid = true;
+        form.querySelectorAll("input[required]").forEach((input) => {
+            const ok = input.value.trim() !== "" && input.checkValidity();
+            input.closest(".field").classList.toggle("has-error", !ok);
+            if (!ok) valid = false;
+        });
+        if (!valid) {
+            status.textContent = "Please check the highlighted fields.";
+            return;
+        }
+        // TODO: send form data to your backend or form service here
+        status.textContent = "Thank you. We will contact you shortly.";
+        form.reset();
+    });
+}
+
+// Highlight the active nav link while scrolling
+const navLinks = document.querySelectorAll(".site-nav__link");
+const sections = [...navLinks]
+    .map((l) => document.querySelector(l.getAttribute("href")))
+    .filter(Boolean);
+const navObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach((l) => {
+                const active = l.getAttribute("href") === "#" + entry.target.id;
+                l.classList.toggle("is-active", active);
+                if (active) l.setAttribute("aria-current", "page");
+                else l.removeAttribute("aria-current");
+            });
+        });
+    },
+    { rootMargin: "-40% 0px -55% 0px" }
+);
+sections.forEach((s) => navObserver.observe(s));

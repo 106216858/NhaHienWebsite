@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -59,78 +60,140 @@
           </p>
         </div>
         <div class="about-section__media">
-          <img src="img/about.jpg" alt="People sharing a tea and flower arranging activity">
+          <img src="img/about.jpg" alt="Image">
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="section section--dark reveal" id="services">
-      <h2 class="section__title section__title--centered">What we offer</h2>
-      <ul class="service-list">
-        <li class="service-list__item">Service one</li>
-        <li class="service-list__item">Service two</li>
-        <li class="service-list__item">Service three</li>
-      </ul>
-    </section>
-
-    <!-- Team -->
-    <section class="section section--light team-section" id="team">
-      <h2 class="section__title section__title--centered">Our team</h2>
-      <div class="team-section__grid">
-        <div class="placeholder placeholder--round">Image</div>
-        <div class="team-section__content">
-          <p>Placeholder paragraph about the team's background.</p>
-          <p>Placeholder paragraph about their experience.</p>
-          <p>Placeholder paragraph about what drives them.</p>
+    <!-- Experiences -->
+    <section class="explore" id="services">
+      <div class="explore__inner">
+        <div class="explore__head reveal">
+          <div class="explore__intro">
+            <p class="explore__eyebrow">Explore your possibilities</p>
+            <h2 class="explore__title">Find something you love.</h2>
+            <p class="explore__lead">Experiences for curious minds and joyful hearts.</p>
+          </div>
+          <a class="explore__all" href="experience.html">View all experiences</a>
         </div>
-        <div class="placeholder placeholder--round">Image</div>
+
+        <div class="explore__grid">
+          <a class="tile reveal" href="experience.html#arts" style="--delay:.00s">
+            <img src="img/arts.jpeg" alt="Paint palette and brushes on a studio table" loading="lazy">
+            <span class="tile__label">Arts</span>
+          </a>
+          <a class="tile reveal" href="experience.html#baking" style="--delay:.08s">
+            <img src="img/baking.jpeg" alt="Vintage recipes, eggs and a rolling pin" loading="lazy">
+            <span class="tile__label">Cooking<br>&amp; Baking</span>
+          </a>
+          <a class="tile reveal" href="experience.html#tea" style="--delay:.16s">
+            <img src="img/tea.jpeg" alt="Traditional tea tray with incense" loading="lazy">
+            <span class="tile__label">Culture<br>&amp; Tea</span>
+          </a>
+          <a class="tile tile--left reveal" href="experience.html#movement" style="--delay:.00s">
+            <img src="img/meditate.jpeg" alt="Person meditating on a mat in a sunlit garden" loading="lazy">
+            <span class="tile__label">Movement</span>
+          </a>
+          <a class="tile reveal" href="experience.html#games" style="--delay:.08s">
+            <img src="img/boardgame.jpeg" alt="Two people playing Chinese chess" loading="lazy">
+            <span class="tile__label">Social<br>&amp; Games</span>
+          </a>
+          <a class="tile reveal" href="experience.html#floral" style="--delay:.16s">
+            <img src="img/flowers.jpeg" alt="Hands arranging a fresh flower bouquet" loading="lazy">
+            <span class="tile__label">Floral<br>Design</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Benefits -->
-    <section class="section section--dark section--narrow">
-      <h2 class="section__title section__title--centered">Why choose us</h2>
-      <ul class="benefit-list">
-        <li class="benefit-list__item">Benefit one</li>
-        <li class="benefit-list__item">Benefit two</li>
-        <li class="benefit-list__item">Benefit three</li>
-        <li class="benefit-list__item">Benefit four</li>
-      </ul>
+    <!-- Why Nhã Hiên -->
+    <section class="why" id="team">
+      <div class="why__inner">
+        <div class="why__head reveal">
+          <p class="eyebrow eyebrow--light">Why Nhã Hiên</p>
+          <h2 class="why__title">A place that feels like an invitation.</h2>
+        </div>
+        <ul class="why__list">
+          <li class="why__item reveal" style="--delay:.00s">
+            <span class="why__num">01</span>
+            <h3>Curated activities</h3>
+            <p>Every session is designed and hosted by experienced guides.</p>
+          </li>
+          <li class="why__item reveal" style="--delay:.08s">
+            <span class="why__num">02</span>
+            <h3>Small groups</h3>
+            <p>Room to breathe, talk and make real connections.</p>
+          </li>
+          <li class="why__item reveal" style="--delay:.16s">
+            <span class="why__num">03</span>
+            <h3>Lifelong learning</h3>
+            <p>New skills at your own pace, with no pressure and no exams.</p>
+          </li>
+          <li class="why__item reveal" style="--delay:.24s">
+            <span class="why__num">04</span>
+            <h3>Garden setting</h3>
+            <p>A calm, green space away from the noise of the city.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Partners / testimonials -->
-    <section class="section section--light testimonial-section" id="partners">
-      <h2 class="section__title">Our partners</h2>
-      <figure class="testimonial">
-        <blockquote class="testimonial__quote">Placeholder quote. One or two sentences from a partner or client.
-        </blockquote>
-        <figcaption class="testimonial__author">
-          Partner Name
-          <span class="testimonial__role">Role or company</span>
-        </figcaption>
-      </figure>
+    <!-- Partners -->
+    <section class="partners" id="partners">
+      <div class="partners__inner reveal">
+        <p class="eyebrow">Our partners</p>
+        <figure class="quote">
+          <blockquote class="quote__text">Placeholder quote. One or two sentences from a partner or client.</blockquote>
+          <figcaption class="quote__author">Partner Name <span>Role or company</span></figcaption>
+        </figure>
+        <ul class="partners__logos" aria-label="Partner logos">
+          <li>Partner one</li>
+          <li>Partner two</li>
+          <li>Partner three</li>
+          <li>Partner four</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section section--dark booking-section" id="contact">
-      <h2 class="section__title section__title--centered">Book now</h2>
-      <p class="section__lead">Fill in the form and we will contact you.</p>
-      <div class="booking-section__grid">
-        <div class="placeholder placeholder--small">Image</div>
-        <form class="booking-form">
-          <label class="booking-form__field">Full name
-            <input class="booking-form__input" type="text" name="name">
-          </label>
-          <label class="booking-form__field">Phone
-            <input class="booking-form__input" type="tel" name="phone">
-          </label>
-          <label class="booking-form__field">Email
-            <input class="booking-form__input" type="email" name="email">
-          </label>
-          <button class="button button--primary" type="submit">Send</button>
-        </form>
-        <div class="placeholder placeholder--small">Image</div>
+    <!-- Booking -->
+    <section class="booking" id="contact">
+      <div class="booking__grid reveal">
+        <div class="booking__media">
+          <img src="img/tea.jpeg" alt="Tea tray with incense" loading="lazy">
+        </div>
+        <div class="booking__panel">
+          <p class="eyebrow eyebrow--light">Book now</p>
+          <h2 class="booking__title">Reserve your experience.</h2>
+          <p class="booking__lead">Leave your details and we will contact you to confirm.</p>
+          <form class="booking-form" id="booking-form" novalidate>
+            <label class="field">
+              <span>Full name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input type="tel" name="phone" autocomplete="tel" required>
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label class="field">
+              <span>Experience</span>
+              <select name="experience">
+                <option value="">Select an experience</option>
+                <option>Art Studio</option>
+                <option>Baking Circle</option>
+                <option>Board Games</option>
+                <option>Flower Arranging</option>
+                <option>Garden Meditation</option>
+                <option>Tea Ceremony</option>
+              </select>
+            </label>
+            <button class="button button--primary booking-form__submit" type="submit">Send request</button>
+            <p class="booking-form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
