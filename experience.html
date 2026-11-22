@@ -7,21 +7,20 @@
   <title>Experiences | Nhã Hiên</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="48x48">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="img/brand/favicon-512.png">
+  <link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
   <header class="site-header">
-    <a class="site-header__brand" href="index.html"><img src="img/logo.png" alt="Nhã Hiên"></a>
+    <a class="site-header__brand" href="index.html"><img src="img/brand/logo.png" alt="Nhã Hiên"></a>
     <nav class="site-nav" aria-label="Main">
       <a class="site-nav__link" href="index.html">Home</a>
       <a class="site-nav__link is-active" href="experience.html" aria-current="page">Experiences</a>
@@ -36,29 +35,35 @@
       <div class="exp-hero__inner reveal">
         <p class="exp-hero__eyebrow">Discover something new</p>
         <h1 class="exp-hero__title" id="exp-title">Our experiences.</h1>
-        <p class="exp-hero__text">Choose what inspires you. Every experience is designed to be enjoyable, welcoming and accessible.</p>
+        <p class="exp-hero__text">Choose what inspires you. Every experience is designed to be enjoyable, welcoming and
+          accessible.</p>
         <div class="exp-filter" role="group" aria-label="Filter experiences">
-          <button class="exp-filter__btn is-active" type="button" data-filter="all" aria-pressed="true">All Activities</button>
+          <button class="exp-filter__btn is-active" type="button" data-filter="all" aria-pressed="true">All
+            Activities</button>
           <button class="exp-filter__btn" type="button" data-filter="arts" aria-pressed="false">Arts</button>
-          <button class="exp-filter__btn" type="button" data-filter="baking" aria-pressed="false">Cooking &amp; Baking</button>
-          <button class="exp-filter__btn" type="button" data-filter="tea" aria-pressed="false">Culture &amp; Tea</button>
+          <button class="exp-filter__btn" type="button" data-filter="baking" aria-pressed="false">Cooking &amp;
+            Baking</button>
+          <button class="exp-filter__btn" type="button" data-filter="tea" aria-pressed="false">Culture &amp;
+            Tea</button>
           <button class="exp-filter__btn" type="button" data-filter="movement" aria-pressed="false">Movement</button>
-          <button class="exp-filter__btn" type="button" data-filter="games" aria-pressed="false">Social &amp; Games</button>
+          <button class="exp-filter__btn" type="button" data-filter="games" aria-pressed="false">Social &amp;
+            Games</button>
           <button class="exp-filter__btn" type="button" data-filter="floral" aria-pressed="false">Floral Design</button>
         </div>
 
         <div class="exp-grid" id="exp-grid">
           <article class="exp-card" data-category="arts">
-            <img class="exp-card__img" src="img/exp_craft.jpeg" alt="" loading="lazy">
+            <img class="exp-card__img" src="img/experiences/craft.jpeg" alt="" loading="lazy">
             <div class="exp-card__body">
               <p class="exp-card__category">Arts</p>
               <h2 class="exp-card__title">Painting &amp; Creative Art</h2>
-              <p class="exp-card__text">Explore colours, techniques and personal expression through guided art sessions.</p>
+              <p class="exp-card__text">Explore colours, techniques and personal expression through guided art sessions.
+              </p>
               <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
           <article class="exp-card" data-category="arts">
-            <img class="exp-card__img" src="img/exp_pottery.jpeg" alt="" loading="lazy">
+            <img class="exp-card__img" src="img/experiences/pottery.jpeg" alt="" loading="lazy">
             <div class="exp-card__body">
               <p class="exp-card__category">Arts</p>
               <h2 class="exp-card__title">Pottery &amp; Handcrafts</h2>
@@ -67,11 +72,94 @@
             </div>
           </article>
           <article class="exp-card" data-category="baking">
-            <img class="exp-card__img" src="img/exp_cooking.jpeg" alt="" loading="lazy">
+            <img class="exp-card__img" src="img/experiences/baking.jpeg" alt="" loading="lazy">
             <div class="exp-card__body">
               <p class="exp-card__category">Cooking &amp; Baking</p>
               <h2 class="exp-card__title">Cooking Together</h2>
               <p class="exp-card__text">Learn recipes, share skills and enjoy the pleasure of preparing food.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="baking">
+            <img class="exp-card__img" src="img/experiences/cooking.jpeg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Cooking &amp; Baking</p>
+              <h2 class="exp-card__title">Baking Workshop</h2>
+              <p class="exp-card__text">Make delicious treats and take home something you created yourself.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="tea">
+            <img class="exp-card__img" src="img/experiences/tea.jpeg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Culture &amp; Tea</p>
+              <h2 class="exp-card__title">Tea Appreciation</h2>
+              <p class="exp-card__text">Discover tea traditions, preparation and the art of slowing down.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="tea">
+            <img class="exp-card__img" src="img/experiences/cultural_discovery.jpeg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Culture &amp; Tea</p>
+              <h2 class="exp-card__title">Cultural Discovery</h2>
+              <p class="exp-card__text">Explore local customs, stories and everyday traditions in a relaxed setting.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="movement">
+            <img class="exp-card__img" src="img/experiences/yoga.jpeg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Movement</p>
+              <h2 class="exp-card__title">Gentle Movement</h2>
+              <p class="exp-card__text">Enjoy slow, guided sessions focused on balance, flexibility, moving at a
+                comfortable pace.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="movement">
+            <img class="exp-card__img" src="img/experiences/movement.jpeg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Movement</p>
+              <h2 class="exp-card__title">Active Movement</h2>
+              <p class="exp-card__text">Build strength, flexibility and energy through uplifting, low-impact sports and
+                cardio activities.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="games">
+            <img class="exp-card__img" src="img/experiences/board_games.jpeg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Social &amp; Games</p>
+              <h2 class="exp-card__title">Board Games &amp; Chess</h2>
+              <p class="exp-card__text">Enjoy friendly games, mental challenges and good company.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="games">
+            <img class="exp-card__img" src="img/experiences/picnic.jpeg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Social &amp; Games</p>
+              <h2 class="exp-card__title">Community Gatherings</h2>
+              <p class="exp-card__text">Meet new people and share meaningful moments over conversation.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="floral">
+            <img class="exp-card__img" src="img/experiences/arrangements.jpg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Floral Design</p>
+              <h2 class="exp-card__title">Flower Arrangement</h2>
+              <p class="exp-card__text">Learn the art of arranging flowers and creating beautiful displays.</p>
+              <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="exp-card" data-category="floral">
+            <img class="exp-card__img" src="img/experiences/flower.jpeg" alt="" loading="lazy">
+            <div class="exp-card__body">
+              <p class="exp-card__category">Floral Design</p>
+              <h2 class="exp-card__title">Flower Arrangement</h2>
+              <p class="exp-card__text">Learn the art of arranging flowers and creating beautiful displays.</p>
               <a class="exp-card__link" href="#contact">Enquire about this <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
@@ -81,11 +169,15 @@
     </section>
   </main>
 
+
+
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div class="site-footer__brand">
-        <a href="index.html" aria-label="Nhã Hiên home"><img class="site-footer__logo" src="img/logo.png" alt="Nhã Hiên"></a>
-        <p class="site-footer__tagline">A space for new discoveries, meaningful connections and beautiful everyday moments.</p>
+        <a href="index.html" aria-label="Nhã Hiên home"><img class="site-footer__logo" src="img/brand/logo.png"
+            alt="Nhã Hiên"></a>
+        <p class="site-footer__tagline">A space for new discoveries, meaningful connections and beautiful everyday
+          moments.</p>
       </div>
       <nav class="site-footer__col" aria-label="Explore">
         <h2 class="site-footer__heading">Explore</h2>
@@ -107,20 +199,23 @@
         <h2 class="site-footer__heading">Contact us</h2>
         <form class="footer-form" id="footer-form" novalidate>
           <label class="visually-hidden" for="footer-email">Email address</label>
-          <input class="footer-form__input" id="footer-email" type="email" name="email" placeholder="Your email" autocomplete="email" required>
+          <input class="footer-form__input" id="footer-email" type="email" name="email" placeholder="Your email"
+            autocomplete="email" required>
           <button class="footer-form__button" type="submit" aria-label="Send">&rarr;</button>
         </form>
         <p class="footer-form__status" role="status" aria-live="polite"></p>
         <h2 class="site-footer__heading site-footer__heading--spaced">Follow us</h2>
         <ul class="site-footer__social">
-          <li><a href="#" aria-label="Facebook"><img src="img/fb_logo.png" alt="" loading="lazy"></a></li>
-          <li><a href="#" aria-label="Instagram"><img src="img/ins_logo.png" alt="" loading="lazy"></a></li>
-          <li><a href="#" aria-label="TikTok"><img src="img/tiktok_logo.png" alt="" loading="lazy"></a></li>
-          <li><a href="#" aria-label="X"><img src="img/x_logo.png" alt="" loading="lazy"></a></li>
+          <li><a href="#" aria-label="Facebook"><img src="img/social/fb_logo.png" alt="" loading="lazy"></a></li>
+          <li><a href="#" aria-label="Instagram"><img src="img/social/ins_logo.png" alt="" loading="lazy"></a></li>
+          <li><a href="#" aria-label="TikTok"><img src="img/social/tiktok_logo.png" alt="" loading="lazy"></a></li>
+          <li><a href="#" aria-label="X"><img src="img/social/x_logo.png" alt="" loading="lazy"></a></li>
         </ul>
       </div>
     </div>
-    <div class="site-footer__bottom"><p>&copy; 2026 Nhã Hiên. All rights reserved.</p></div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Nhã Hiên. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="app.js"></script>

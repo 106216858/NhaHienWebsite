@@ -156,7 +156,7 @@ a {
   padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem);
   background:
     linear-gradient(rgba(36, 48, 31, 0.72), rgba(36, 48, 31, 0.72)),
-    url("img/banner.jpg") center / cover;
+    url("img/backgrounds/banner.jpg") center / cover;
   color: var(--color-ivory);
   text-align: center;
 }
@@ -630,7 +630,7 @@ a {
   align-items: center;
   gap: clamp(1.5rem, 4vw, 2.5rem);
   padding: clamp(2rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2rem);
-  background: var(--color-forest-dark) url("img/bg_experience.jpeg") center / cover no-repeat;
+  background: var(--color-forest-dark) url("img/backgrounds/bg_experience.jpeg") center / cover no-repeat;
   color: var(--color-ivory);
   isolation: isolate;
 }
@@ -848,7 +848,7 @@ a {
   flex-direction: column;
   min-height: clamp(38rem, 80vw, 60rem);
   padding: clamp(2rem, 6vw, 4.5rem) 0 clamp(1.5rem, 5vw, 3rem);
-  background: #0b0b0a url("img/bg_journey.jpeg") center / cover no-repeat;
+  background: #0b0b0a url("img/backgrounds/bg_journey.jpeg") center / cover no-repeat;
   color: var(--color-ivory);
   isolation: isolate;
 }
@@ -1021,7 +1021,7 @@ a {
   display: flex;
   align-items: center;
   padding: clamp(1rem, 4vw, 4rem);
-  background: var(--color-forest-dark) url("img/craft.jpeg") center / cover no-repeat;
+  background: var(--color-forest-dark) url("img/home/craft.jpeg") center / cover no-repeat;
   isolation: isolate;
 }
 
@@ -1311,7 +1311,7 @@ a {
   padding: clamp(2.5rem, 7vw, 5rem) clamp(1rem, 5vw, 4rem) clamp(3rem, 8vw, 6rem);
   background:
     linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
-    url("img/bg_exp.jpeg") center / cover no-repeat;
+    url("img/backgrounds/bg_exp.jpeg") center / cover no-repeat;
   color: var(--color-ivory);
 }
 
@@ -1398,7 +1398,9 @@ a {
 .exp-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 3vw, 2rem);
+  max-width: 1100px;
+  margin-inline: auto;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
   margin-top: clamp(2.5rem, 7vw, 4.5rem);
 }
 
@@ -1444,8 +1446,8 @@ a {
 .exp-card__body {
   display: flex;
   flex-direction: column;
-  min-height: 17rem;
-  padding: clamp(1rem, 2.5vw, 1.75rem);
+  min-height: 15rem;
+  padding: clamp(0.9rem, 2vw, 1.4rem);
 }
 
 .exp-card__category {
@@ -1457,8 +1459,9 @@ a {
 .exp-card__title {
   margin-bottom: 0.75rem;
   font-family: "Cormorant Garamond", Georgia, serif;
-  min-height: 2.1em; /* reserve two lines so every card's text lines up */
-  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  min-height: 2.1em;
+  /* reserve two lines so every card's text lines up */
+  font-size: clamp(1.35rem, 2.3vw, 1.8rem);
   font-weight: 700;
   line-height: 1.05;
 }
@@ -1466,7 +1469,7 @@ a {
 .exp-card__text {
   flex: 1;
   margin-bottom: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.45;
 }
 
@@ -1493,9 +1496,134 @@ a {
   font-size: 1.05rem;
 }
 
+/* Slider: 6 cards per slide, arrows pan to the next slide */
+.exp-slider {
+  max-width: 1100px;
+  margin-inline: auto;
+  margin-top: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.exp-slider__viewport {
+  overflow: hidden;
+  /* vertical room so card shadows are not clipped */
+  margin: -0.5rem 0;
+  padding: 0.5rem 0;
+  touch-action: pan-y;
+}
+
+.exp-slider__track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exp-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.exp-slider__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin-top: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.exp-slider__controls[hidden] {
+  display: none;
+}
+
+.exp-slider__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-width: 12rem;
+  min-height: 3.5rem;
+  padding: 0.75rem 1.75rem;
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius);
+  background-color: transparent;
+  color: var(--color-ivory);
+  font-family: var(--font-ui);
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--ease),
+    color var(--ease);
+}
+
+.exp-slider__btn--next {
+  background-color: var(--color-gold);
+  color: var(--color-forest-dark);
+}
+
+.exp-slider__btn:hover:not(:disabled) {
+  background-color: var(--color-ivory);
+  border-color: var(--color-ivory);
+  color: var(--color-forest-dark);
+}
+
+.exp-slider__btn:focus-visible {
+  outline: 3px solid var(--color-ivory);
+  outline-offset: 4px;
+}
+
+.exp-slider__btn:disabled {
+  border-color: rgba(243, 235, 221, 0.35);
+  background-color: transparent;
+  color: rgba(243, 235, 221, 0.5);
+  cursor: not-allowed;
+}
+
+.exp-slider__page {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .exp-slider__controls {
+    justify-content: center;
+  }
+
+  .exp-slider__page {
+    order: -1;
+    width: 100%;
+    text-align: center;
+  }
+
+  .exp-slider__btn {
+    flex: 1 1 100%;
+  }
+}
+
 @media (max-width: 800px) {
-  .exp-grid {
+
+  .exp-grid,
+  .exp-slide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+
+  .exp-grid,
+  .exp-slide {
     grid-template-columns: minmax(0, 1fr);
-    max-width: 24rem;
+    max-width: 21rem;
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exp-slider__track {
+    transition: none;
   }
 }
