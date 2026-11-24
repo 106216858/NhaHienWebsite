@@ -218,6 +218,767 @@ a {
   }
 }
 
+/* ===== Our Story: vision section ===== */
+.story-vision {
+  display: flex;
+  align-items: center;
+  min-height: clamp(26rem, 52vw, 38rem);
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 6vw, 5rem);
+  background:
+    linear-gradient(90deg,
+      rgba(36, 48, 31, 0.94) 0%,
+      rgba(36, 48, 31, 0.8) 40%,
+      rgba(36, 48, 31, 0.2) 75%,
+      rgba(36, 48, 31, 0) 100%),
+    url("img/backgrounds/bg_1.png") center / cover no-repeat;
+  background-color: var(--color-forest-dark);
+  color: var(--color-ivory);
+}
+
+.story-vision__inner {
+  width: 100%;
+  max-width: 34rem;
+}
+
+.story-vision__eyebrow {
+  margin-bottom: clamp(0.9rem, 2.5vw, 1.5rem);
+  color: var(--color-gold);
+  font-size: clamp(0.75rem, 1.6vw, 0.9rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.story-vision__title {
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.04rem, 5.1vw, 3.6125rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.story-vision__title em {
+  display: block;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.story-vision__text {
+  max-width: 28rem;
+  margin-bottom: clamp(1.5rem, 3.5vw, 2.25rem);
+  color: rgba(243, 235, 221, 0.92);
+  font-size: clamp(0.85rem, 1.53vw, 0.9775rem);
+  line-height: 1.55;
+}
+
+.story-vision__link {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius);
+  background-color: var(--color-gold);
+  box-shadow: var(--shadow-soft);
+  color: var(--color-forest-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color var(--ease),
+    color var(--ease),
+    transform var(--ease),
+    box-shadow var(--ease);
+}
+
+.story-vision__link:hover,
+.story-vision__link:focus-visible {
+  background-color: var(--color-ivory);
+  color: var(--color-forest-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 640px) {
+  .story-vision {
+    background:
+      linear-gradient(180deg, rgba(36, 48, 31, 0.82), rgba(36, 48, 31, 0.7)),
+      url("img/backgrounds/bg_1.png") 70% center / cover no-repeat;
+    background-color: var(--color-forest-dark);
+  }
+}
+
+/* ===== Our Story: philosophy section ===== */
+.story-philosophy {
+  display: flex;
+  align-items: stretch;
+  min-height: clamp(32rem, 68vw, 52rem);
+  padding: clamp(1rem, 4vw, 3rem);
+  background:
+    linear-gradient(rgba(20, 26, 18, 0.35), rgba(20, 26, 18, 0.35)),
+    url("img/backgrounds/bg_2.png") center / cover no-repeat;
+  background-color: var(--color-forest-dark);
+  color: var(--color-ivory);
+}
+
+.story-philosophy__panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1rem, 4vw, 3rem);
+  background-color: rgba(20, 20, 16, 0.55);
+  text-align: center;
+}
+
+.story-philosophy__main {
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.story-philosophy__eyebrow {
+  margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+  color: var(--color-gold);
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.story-philosophy__title {
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.87rem, 5.1vw, 3.825rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.story-philosophy__title span {
+  display: block;
+}
+
+.story-philosophy__text {
+  max-width: 36rem;
+  margin-block: auto;
+  padding-block: clamp(2rem, 5vw, 4rem);
+  margin-inline: auto;
+  font-size: clamp(0.8075rem, 1.53vw, 0.9775rem);
+  font-weight: 500;
+  line-height: 1.5;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.story-philosophy__note {
+  font-size: clamp(0.75rem, 1.6vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== Our Story: meaning section (tall, portrait) ===== */
+.story-meaning {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  min-height: clamp(44rem, 95vw, 62rem);
+  padding: clamp(1rem, 4vw, 3rem);
+  background:
+    linear-gradient(rgba(20, 26, 18, 0.25), rgba(20, 26, 18, 0.25)),
+    url("img/backgrounds/bg_3.jpeg") left center / cover no-repeat;
+  background-color: var(--color-forest-dark);
+  color: var(--color-ivory);
+}
+
+.story-meaning__panel {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 36rem);
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 3.5vw, 2.5rem);
+  background-color: rgba(12, 8, 6, 0.72);
+}
+
+.story-meaning__eyebrow {
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.story-meaning__title {
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.04rem, 4.675vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.story-meaning__title span {
+  display: block;
+}
+
+.story-meaning__body {
+  display: grid;
+  gap: 1.25rem;
+  font-size: clamp(0.8075rem, 1.36vw, 0.935rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.story-meaning__tagline {
+  margin-top: auto;
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  border-top: 1px solid rgba(243, 235, 221, 0.35);
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.story-meaning__body {
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+}
+
+@media (max-width: 640px) {
+  .story-meaning {
+    background-position: 20% center;
+  }
+
+  .story-meaning__panel {
+    width: 82%;
+  }
+}
+
+/* ===== Our Story: experience section (tall, portrait) ===== */
+.story-experience {
+  min-height: clamp(44rem, 95vw, 62rem);
+  padding: clamp(1rem, 4vw, 3rem);
+  background:
+    linear-gradient(rgba(24, 16, 10, 0.5), rgba(12, 8, 6, 0.62)),
+    url("img/backgrounds/bg_4.png") center / cover no-repeat;
+  background-color: var(--color-forest-dark);
+  color: var(--color-ivory);
+}
+
+.story-experience__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  min-height: inherit;
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+}
+
+.story-experience__panel {
+  width: min(100%, 42rem);
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 3.5vw, 2.5rem);
+  background-color: rgba(20, 24, 18, 0.78);
+}
+
+.story-experience__eyebrow {
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  color: var(--color-gold);
+  font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.story-experience__title {
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  max-width: 11ch;
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.38rem, 5.525vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.story-experience__body {
+  display: grid;
+  gap: 1.5rem;
+  font-size: clamp(0.935rem, 1.785vw, 1.19rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.story-experience__button {
+  display: inline-block;
+  padding: 1.4rem clamp(2rem, 6vw, 3.5rem);
+  background-color: rgba(20, 24, 18, 0.85);
+  color: var(--color-ivory);
+  font-size: clamp(0.95rem, 1.7vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color var(--ease), color var(--ease);
+}
+
+.story-experience__button:hover,
+.story-experience__button:focus-visible {
+  background-color: var(--color-gold);
+  color: var(--color-forest-dark);
+}
+
+@media (max-width: 640px) {
+  .story-experience__panel {
+    width: 90%;
+  }
+}
+
+/* ===== Our Story: seamless flow between sections ===== */
+/* Every story section fades into one shared dark tone at its top and bottom,
+   so the background photos melt into each other instead of ending on hard edges. */
+:root {
+  --story-base: #14110c;
+}
+
+.story-vision,
+.story-philosophy,
+.story-meaning,
+.story-experience {
+  position: relative;
+  isolation: isolate;
+}
+
+.story-vision::before,
+.story-vision::after,
+.story-philosophy::before,
+.story-philosophy::after,
+.story-meaning::before,
+.story-meaning::after,
+.story-experience::before,
+.story-experience::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  height: clamp(2.5rem, 7vw, 6rem);
+  pointer-events: none;
+}
+
+.story-vision::before,
+.story-philosophy::before,
+.story-meaning::before,
+.story-experience::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(20, 17, 12, 0.55) 0%, rgba(20, 17, 12, 0) 100%);
+}
+
+.story-vision::after,
+.story-philosophy::after,
+.story-meaning::after,
+.story-experience::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(20, 17, 12, 0.55) 0%, rgba(20, 17, 12, 0) 100%);
+}
+
+/* No fade at the very top (under the header) or the very bottom (before the footer) */
+.story-vision::before,
+.story-experience::after {
+  display: none;
+}
+
+/* Content stays above the fades */
+.story-vision__inner,
+.story-philosophy__panel,
+.story-meaning__panel,
+.story-experience__inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Same base colour behind every photo, and the same warm tint on all of them */
+.story-vision,
+.story-philosophy,
+.story-meaning,
+.story-experience {
+  background-color: var(--story-base);
+}
+
+/* Unified panel look: same dark warm glass on every section */
+.story-philosophy__panel,
+.story-meaning__panel,
+.story-experience__panel {
+  background-color: rgba(18, 14, 10, 0.68);
+}
+
+/* Vision: swap the green wash for the same warm dark tone as the rest */
+.story-vision {
+  background:
+    linear-gradient(90deg,
+      rgba(20, 17, 12, 0.94) 0%,
+      rgba(20, 17, 12, 0.78) 40%,
+      rgba(20, 17, 12, 0.2) 75%,
+      rgba(20, 17, 12, 0) 100%),
+    url("img/backgrounds/bg_1.png") center / cover no-repeat;
+  background-color: var(--story-base);
+}
+
+@media (max-width: 640px) {
+  .story-vision {
+    background:
+      linear-gradient(180deg, rgba(20, 17, 12, 0.82), rgba(20, 17, 12, 0.7)),
+      url("img/backgrounds/bg_1.png") 70% center / cover no-repeat;
+    background-color: var(--story-base);
+  }
+}
+
+/* ===== Our Story: shared format for numbered sections ===== */
+.story-philosophy__eyebrow,
+.story-meaning__eyebrow,
+.story-experience__eyebrow {
+  margin-bottom: clamp(1rem, 2.5vw, 1.75rem);
+  color: var(--color-gold);
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.story-philosophy__title,
+.story-meaning__title,
+.story-experience__title {
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.21rem, 5.1vw, 4.0375rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.story-philosophy__title {
+  margin-bottom: 0;
+}
+
+.story-philosophy__text,
+.story-meaning__body,
+.story-experience__body {
+  font-size: clamp(0.8925rem, 1.7vw, 1.105rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.story-meaning__panel,
+.story-experience__panel {
+  width: min(100%, 40rem);
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 3.5vw, 2.5rem);
+}
+
+@media (max-width: 640px) {
+  .story-meaning__panel {
+    width: 82%;
+  }
+
+  .story-experience__panel {
+    width: 90%;
+  }
+}
+
+/* ===== Our Partners ===== */
+.partner-hero {
+  display: grid;
+  place-items: center;
+  min-height: clamp(22rem, 46vw, 36rem);
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 6vw, 5rem);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("img/backgrounds/bg_partner.jpeg") center 40% / cover no-repeat;
+  background-color: var(--color-forest-dark);
+  color: var(--color-ivory);
+  text-align: center;
+}
+
+.partner-hero__inner {
+  width: 100%;
+  max-width: 52rem;
+}
+
+.partner-hero__eyebrow {
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+  color: var(--color-gold);
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.partner-hero__title {
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  color: var(--color-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.partner-hero__rule {
+  width: min(70%, 28rem);
+  margin: 0 auto clamp(1.25rem, 3vw, 2rem);
+  border: 0;
+  border-top: 1px solid rgba(243, 235, 221, 0.4);
+}
+
+.partner-hero__text {
+  max-width: 44rem;
+  margin-inline: auto;
+  font-size: clamp(1rem, 1.9vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+
+.partner-network {
+  display: flex;
+  align-items: center;
+  min-height: clamp(30rem, 62vw, 46rem);
+  padding: clamp(2rem, 6vw, 4.5rem) clamp(1rem, 5vw, 4rem);
+  color: var(--color-ivory);
+}
+
+/* One continuous photo behind the network and directory sections.
+   If the content gets taller than the photo, it repeats downwards. */
+.partner-flow {
+  position: relative;
+  isolation: isolate;
+  background: var(--color-forest-dark) url("img/backgrounds/bg_partner2.jpeg") center top / 100% auto repeat-y;
+}
+
+.partner-flow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.partner-directory {
+  padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1rem, 5vw, 4rem) clamp(4rem, 12vw, 9rem);
+  color: var(--color-ivory);
+  text-align: center;
+}
+
+.partner-directory__inner {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.partner-directory__title {
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.2rem, 5.5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.partner-directory__lead {
+  max-width: 44rem;
+  margin: 0 auto clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(0.95rem, 1.7vw, 1.15rem);
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.partner-search {
+  width: min(100%, 34rem);
+  margin: 0 auto clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.partner-search__input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(243, 235, 221, 0.85);
+  border-radius: var(--radius);
+  background-color: rgba(10, 16, 8, 0.25);
+  color: var(--color-ivory);
+  font: inherit;
+  font-size: 1rem;
+  transition: border-color var(--ease), background-color var(--ease);
+}
+
+/* Clear (x) button: replace the default blue one with a gold one */
+.partner-search__input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23C3A16F' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M3 3l10 10M13 3L3 13'/%3E%3C/svg%3E") center / contain no-repeat;
+  opacity: 0.85;
+  transition: opacity var(--ease);
+}
+
+.partner-search__input::-webkit-search-cancel-button:hover {
+  opacity: 1;
+}
+
+.partner-search__input::selection {
+  background: var(--color-gold);
+  color: var(--color-forest-dark);
+}
+
+.partner-search__input::placeholder {
+  color: rgba(243, 235, 221, 0.6);
+}
+
+.partner-search__input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  background-color: rgba(10, 16, 8, 0.45);
+}
+
+.partner-filter {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem 1.25rem;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.partner-filter__btn {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius);
+  background-color: rgba(10, 16, 8, 0.3);
+  color: var(--color-ivory);
+  font-family: var(--font-ui);
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color var(--ease),
+    color var(--ease);
+}
+
+.partner-filter__btn:hover {
+  background-color: rgba(195, 161, 111, 0.25);
+}
+
+.partner-filter__btn.is-active,
+.partner-filter__btn.is-active:hover {
+  background-color: var(--color-gold);
+  color: var(--color-forest-dark);
+  font-weight: 700;
+}
+
+.partner-filter__btn:focus-visible {
+  outline: 2px solid var(--color-ivory);
+  outline-offset: 3px;
+}
+
+/* Reserved space for the partner cards that will be added under the filters */
+.partner-results {
+  min-height: clamp(26rem, 70vw, 48rem);
+  margin-top: clamp(2.5rem, 7vw, 5rem);
+  text-align: left;
+}
+
+@media (max-width: 560px) {
+  .partner-filter {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .partner-filter__btn {
+    padding-inline: 0.5rem;
+  }
+}
+
+.partner-network__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.partner-network__eyebrow {
+  margin-bottom: clamp(1rem, 2.5vw, 1.75rem);
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.partner-network__frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(1rem, 3vw, 2.25rem);
+  background-color: rgba(100, 122, 84, 0.38);
+}
+
+.partner-network__panel {
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 3.5vw, 2.5rem);
+  background-color: rgba(20, 24, 14, 0.68);
+}
+
+.partner-network__title {
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  color: var(--color-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.partner-network__title span {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .partner-network__title span {
+    white-space: normal;
+  }
+}
+
+.partner-network__text {
+  max-width: 30rem;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.partner-network__logo {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 22rem;
+  margin-inline: auto;
+  aspect-ratio: 1;
+  padding: 12%;
+  background-color: var(--color-ivory);
+}
+
+.partner-network__logo img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .partner-network__frame {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .partner-network__logo {
+    max-width: 14rem;
+  }
+}
+
 /* ===== Hero ===== */
 .section.hero-section {
   padding: 0;
@@ -299,12 +1060,13 @@ a {
 }
 
 .hero-banner__title {
-  max-width: 22ch;
+  max-width: none;
   font-family: var(--font-ui);
   font-size: clamp(1.4rem, 4.5vw, 2.4rem);
   font-weight: 600;
   line-height: 1.15;
   text-align: right;
+  white-space: nowrap;
   color: #fff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
@@ -1196,6 +1958,32 @@ a {
   color: var(--color-gold);
 }
 
+/* Enquire link: stands out from the page links as a call to action */
+.site-footer__links a[href="booking.html"] {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  background-color: var(--color-gold);
+  box-shadow: var(--shadow-soft);
+  color: var(--color-forest-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    background-color var(--ease),
+    color var(--ease),
+    transform var(--ease);
+}
+
+.site-footer__links a[href="booking.html"]:hover,
+.site-footer__links a[href="booking.html"]:focus-visible {
+  background-color: var(--color-ivory);
+  color: var(--color-forest-dark);
+  transform: translateY(-2px);
+}
+
 /* Email form */
 .footer-form {
   display: flex;
@@ -1398,7 +2186,7 @@ a {
 .exp-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1100px;
+  max-width: 1000px;
   margin-inline: auto;
   gap: clamp(1rem, 2.5vw, 1.75rem);
   margin-top: clamp(2.5rem, 7vw, 4.5rem);
@@ -1498,7 +2286,7 @@ a {
 
 /* Slider: 6 cards per slide, arrows pan to the next slide */
 .exp-slider {
-  max-width: 1100px;
+  max-width: 1000px;
   margin-inline: auto;
   margin-top: clamp(2.5rem, 7vw, 4.5rem);
 }
@@ -1626,4 +2414,192 @@ a {
   .exp-slider__track {
     transition: none;
   }
+}
+
+/* ===== Booking / enquiry form ===== */
+.booking {
+  padding: clamp(2.5rem, 7vw, 5rem) clamp(1rem, 5vw, 4rem) clamp(3rem, 8vw, 6rem);
+}
+
+.booking__inner {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.booking__eyebrow {
+  margin-bottom: clamp(1rem, 3vw, 1.75rem);
+  color: var(--color-forest);
+  font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.booking__title {
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+  color: var(--color-walnut);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.4rem, 6.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.booking__lead {
+  max-width: 34rem;
+  margin-bottom: clamp(1.75rem, 5vw, 3rem);
+  color: #7a5f3c;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  line-height: 1.55;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background-color: var(--color-forest-dark);
+  color: var(--color-ivory);
+}
+
+.booking-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.booking-form .field--full {
+  grid-column: 1 / -1;
+}
+
+.booking-form label {
+  color: var(--color-gold);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="tel"],
+.booking-form input[type="email"],
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  background-color: var(--color-ivory);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 1.05rem;
+}
+
+.booking-form textarea {
+  min-height: 8.5rem;
+  resize: vertical;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.booking-form__consent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.booking-form__consent input {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  accent-color: var(--color-gold);
+}
+
+.booking-form__consent label {
+  color: var(--color-ivory);
+  font-weight: 400;
+}
+
+.booking-form__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.booking-form__submit {
+  min-width: 15rem;
+  min-height: 3.5rem;
+  padding: 0.75rem 2rem;
+  border: 0;
+  border-radius: var(--radius);
+  background-color: var(--color-sage);
+  color: var(--color-forest-dark);
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color var(--ease),
+    color var(--ease);
+}
+
+.booking-form__submit:hover {
+  background-color: var(--color-gold);
+}
+
+.booking-form__submit:focus-visible {
+  outline: 3px solid var(--color-ivory);
+  outline-offset: 3px;
+}
+
+.booking-form__status {
+  min-height: 1.5em;
+  color: var(--color-gold);
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .booking-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Booking form: errors and honeypot */
+.booking-form .field__error {
+  color: #f6c3b0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.booking-form .field__error[hidden] {
+  display: none;
+}
+
+.booking-form [aria-invalid="true"] {
+  border-color: #e0846b !important;
+}
+
+.booking-form__consent {
+  flex-wrap: wrap;
+}
+
+.booking-form__consent .field__error {
+  flex-basis: 100%;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

@@ -1,3 +1,27 @@
+// Booking form: fill "Activity of Interest" from booking.html?activity=...
+(() => {
+    const activity = new URLSearchParams(location.search).get("activity");
+    if (!activity) return;
+    let field = document.getElementById("activity") || document.querySelector('[name="activity"]');
+    if (!field) {
+        const label = [...document.querySelectorAll("label")].find((l) => /activity of interest/i.test(l.textContent));
+        field = label && label.control;
+    }
+    if (!field) return;
+    if (field.tagName === "SELECT") {
+        // only pick an option that already exists, never create one from the URL
+        const wanted = activity.trim().toLowerCase();
+        const opt = [...field.options].find(
+            (o) => o.value.toLowerCase() === wanted || o.textContent.trim().toLowerCase() === wanted
+        );
+        if (!opt) return;
+        field.value = opt.value;
+    } else {
+        field.value = activity.replace(/[\u0000-\u001F\u007F]/g, " ").trim().slice(0, 80);
+    }
+    field.dispatchEvent(new Event("input", { bubbles: true }));
+})();
+
 // Reveal elements when they scroll into view
 const revealItems = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver(
@@ -98,7 +122,7 @@ if (expButtons.length && expGrid) {
         nextBtn = document.createElement("button");
         nextBtn.type = "button";
         nextBtn.className = "exp-slider__btn exp-slider__btn--next";
-        nextBtn.innerHTML = "More <span aria-hidden='true'>&rarr;</span>";
+        nextBtn.innerHTML = "More experiences <span aria-hidden='true'>&rarr;</span>";
         nextBtn.addEventListener("click", () => goTo(index + 1));
 
         pageLabel = document.createElement("p");

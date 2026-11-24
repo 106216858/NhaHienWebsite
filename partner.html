@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="img/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="512x512" href="img/brand/favicon-512.png">
@@ -30,19 +30,58 @@
   </header>
 
   <main class="page-main">
-    <section class="page-hero">
-      <div class="page-hero__inner reveal">
-        <p class="page-hero__eyebrow">Growing together</p>
-        <h1 class="page-hero__title">Our Partners</h1>
+    <section class="partner-hero" aria-label="Our partners">
+      <div class="partner-hero__inner reveal">
+        <p class="partner-hero__eyebrow">Nhã Hiên</p>
+        <h1 class="partner-hero__title">Our Partners</h1>
+        <hr class="partner-hero__rule">
+        <p class="partner-hero__text">Meaningful experiences begin with meaningful collaborations. We seek out
+          specialists, artisans and trusted organisations who share our commitment to quality, culture and thoughtful
+          living.</p>
       </div>
     </section>
-    <section class="page-content" aria-label="Partners introduction">
-      <div class="page-content__intro reveal">
-        <h2 class="page-content__title">Stronger through connection.</h2>
-        <p class="page-content__text">Meet the organisations and people who share our commitment to wellbeing, creativity
-          and meaningful community experiences.</p>
+    <div class="partner-flow">
+    <section class="partner-network" aria-label="A considered network">
+      <div class="partner-network__inner reveal">
+        <p class="partner-network__eyebrow">A considered network</p>
+        <div class="partner-network__frame">
+          <div class="partner-network__panel">
+            <h2 class="partner-network__title">
+              Excellence in
+              <span>every experience.</span>
+            </h2>
+            <p class="partner-network__text">From Vietnamese craftsmanship and culinary discovery to inclusive design
+              and wellbeing, our proposed partner network reflects the standards behind the Nhã Hiên experience.</p>
+          </div>
+          <div class="partner-network__logo">
+            <img src="img/brand/logo-ivory.png" alt="Nhã Hiên">
+          </div>
+        </div>
       </div>
     </section>
+    <section class="partner-directory" aria-label="Our selected network">
+      <div class="partner-directory__inner reveal">
+        <h2 class="partner-directory__title">Meet Our Selected Network</h2>
+        <p class="partner-directory__lead">Explore the organisations and specialists shortlisted to support our
+          experiences and operations.</p>
+        <form class="partner-search" role="search" onsubmit="return false">
+          <label class="visually-hidden" for="partner-search">Search partners</label>
+          <input class="partner-search__input" id="partner-search" type="search" name="q" placeholder="Search partners" autocomplete="off">
+        </form>
+        <div class="partner-filter" role="group" aria-label="Filter partners by category">
+          <button class="partner-filter__btn is-active" type="button" data-filter="all" aria-pressed="true">All Partners</button>
+          <button class="partner-filter__btn" type="button" data-filter="experience-culture" aria-pressed="false">Experience &amp; Culture</button>
+          <button class="partner-filter__btn" type="button" data-filter="accessibility-design" aria-pressed="false">Accessibility &amp; Design</button>
+          <button class="partner-filter__btn" type="button" data-filter="wellbeing-safety" aria-pressed="false">Wellbeing &amp; Safety</button>
+          <button class="partner-filter__btn" type="button" data-filter="culinary-materials" aria-pressed="false">Culinary &amp; Materials</button>
+          <button class="partner-filter__btn" type="button" data-filter="professional-services" aria-pressed="false">Professional Services</button>
+        </div>
+        <div class="partner-results" id="partner-results" aria-live="polite">
+          <!-- Partner cards (logo, name, details) will go here -->
+        </div>
+      </div>
+    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -58,6 +97,7 @@
           <li><a href="story.html">Our Story</a></li>
           <li><a href="membership.html">Membership</a></li>
           <li><a href="partner.html">Our Partners</a></li>
+          <li><a href="booking.html">Enquire</a></li>
         </ul>
       </nav>
       <div class="site-footer__col">
