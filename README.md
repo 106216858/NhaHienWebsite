@@ -59,4 +59,4 @@ File names are case-sensitive on GitHub, so image paths must match exactly.
 
 ## Team
 
-Add team member names, unit and submission details here.
+To be added.
