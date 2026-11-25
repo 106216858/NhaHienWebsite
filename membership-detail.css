@@ -1,0 +1,224 @@
+/* ===== Membership detail page (loads after styles.css) ===== */
+.md {
+    position: relative;
+    isolation: isolate;
+    min-height: 80vh;
+    padding: clamp(2rem, 6vw, 4.5rem) clamp(1rem, 5vw, 4rem) clamp(4rem, 9vw, 7rem);
+    background: var(--color-forest-dark) var(--md-section-bg, url("img/backgrounds/bg_membership2.jpeg")) var(--md-section-position, center top) / cover no-repeat;
+    color: var(--color-ivory);
+}
+
+.md::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--md-section-overlay, rgba(0, 0, 0, 0.3));
+}
+
+.md__inner {
+    max-width: 32rem;
+    margin-inline: auto;
+}
+
+.md__back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-ivory);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.md__back:hover,
+.md__back:focus-visible {
+    color: var(--color-gold);
+    opacity: 1;
+}
+
+/* Main frame */
+.md-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 48rem;
+    padding: clamp(1.5rem, 5vw, 2.25rem);
+    background: rgba(70, 86, 62, 0.5);
+    box-shadow: var(--shadow-soft);
+}
+
+.md-card__tag {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.md-card__name {
+    margin-bottom: 0.75rem;
+    color: var(--color-ivory);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 6vw, 3rem);
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.md-card__intro {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.md-card__price {
+    margin-bottom: 1.5rem;
+    color: var(--color-gold);
+    font-size: clamp(1.8rem, 5vw, 2.3rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+/* Duration and allocation rows */
+.md-rows {
+    display: grid;
+    gap: 1.1rem;
+    margin-bottom: 1.75rem;
+}
+
+.md-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    min-height: 3.5rem;
+    padding: 0.9rem 1.1rem;
+    background: linear-gradient(90deg, rgba(118, 142, 92, 0.6) 0, rgba(118, 142, 92, 0.6) 67%, rgba(96, 118, 78, 0.5) 67%, rgba(96, 118, 78, 0.5) 100%);
+    font-size: 1.05rem;
+}
+
+.md-row dt {
+    font-weight: 400;
+}
+
+.md-row dd {
+    text-align: right;
+    font-weight: 400;
+}
+
+/* Tabs */
+.md-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1.1rem;
+    background: rgba(12, 14, 10, 0.78);
+}
+
+.md-tab {
+    min-height: 3.5rem;
+    padding: 0.9rem 1rem;
+    border: 0;
+    background: transparent;
+    color: var(--color-ivory);
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--ease), color var(--ease);
+}
+
+.md-tab:hover {
+    color: var(--color-gold);
+}
+
+/* The colour change when a tab is selected */
+.md-tab.is-active {
+    background: var(--color-gold);
+    color: var(--color-forest-dark);
+}
+
+/* Boxes (swapped by JS inside the same frame) */
+.md-panel {
+    padding: 1.6rem 1.5rem;
+    background: rgba(40, 50, 36, 0.5);
+    min-height: 13rem;
+    animation: md-fade 0.25s ease;
+}
+
+.md-panel[hidden] {
+    display: none;
+}
+
+.md-panel [hidden] {
+    display: none;
+}
+
+.md-panel__text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes md-fade {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.md-list {
+    display: grid;
+    gap: 0.7rem;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.md-list li::marker {
+    color: var(--color-gold);
+}
+
+.md-card__cta {
+    align-self: center;
+    margin-top: 1.5rem;
+    min-width: 11rem;
+    padding: 0.8rem 1.75rem;
+    background: rgba(12, 14, 10, 0.78);
+    border: 1px solid transparent;
+    color: var(--color-ivory);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color var(--ease), color var(--ease), border-color var(--ease);
+}
+
+.md-card__cta:hover,
+.md-card__cta:focus-visible {
+    border-color: var(--color-gold);
+    background: var(--color-gold);
+    color: var(--color-forest-dark);
+}
+
+@media (max-width: 420px) {
+    .md-row {
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+
+    .md-row dd {
+        text-align: left;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .md-panel {
+        animation: none;
+    }
+}

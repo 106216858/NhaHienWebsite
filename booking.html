@@ -35,9 +35,8 @@
             <div class="booking__inner">
                 <p class="booking__eyebrow">Discover something new</p>
                 <h1 class="booking__title" id="booking-title">Let's get acquainted.</h1>
-                <p class="booking__lead">Choose what inspires you. Every experience is designed to be enjoyable,
-                    welcoming and
-                    accessible.</p>
+                <p class="booking__lead">Tell us what you’re interested in and which membership you’d like to explore.
+                    We’ll help you find the right fit.</p>
 
                 <form class="booking-form" id="booking-form" novalidate autocomplete="on">
                     <div class="hp" aria-hidden="true">
@@ -81,12 +80,16 @@
                         <p class="field__error" id="activity-error" hidden></p>
                     </div>
                     <div class="field">
-                        <label for="option">Preferred option:</label>
+                        <label for="option">Preferred membership:</label>
                         <select id="option" name="option" aria-describedby="option-error">
                             <option value="">No preference</option>
-                            <option>Single session</option>
-                            <option>Regular weekly sessions</option>
-                            <option>Not sure yet</option>
+                            <option value="single-session">Single Session</option>
+                            <option value="bamboo">Bamboo - 1 month</option>
+                            <option value="wisteria-3">Wisteria - 3 months</option>
+                            <option value="wisteria-6">Wisteria - 6 months</option>
+                            <option value="bonsai">Bonsai - 12 months</option>
+                            <option value="lotus">Lotus - 12 months</option>
+                            <option value="not-sure">Need consultation</option>
                         </select>
                         <p class="field__error" id="option-error" hidden></p>
                     </div>
@@ -147,9 +150,12 @@
                 <p class="footer-form__status" role="status" aria-live="polite"></p>
                 <h2 class="site-footer__heading site-footer__heading--spaced">Follow us</h2>
                 <ul class="site-footer__social">
-                    <li><a href="#" aria-label="Facebook"><img src="img/social/fb_logo.png" alt="" loading="lazy"></a></li>
-                    <li><a href="#" aria-label="Instagram"><img src="img/social/ins_logo.png" alt="" loading="lazy"></a></li>
-                    <li><a href="#" aria-label="TikTok"><img src="img/social/tiktok_logo.png" alt="" loading="lazy"></a></li>
+                    <li><a href="#" aria-label="Facebook"><img src="img/social/fb_logo.png" alt="" loading="lazy"></a>
+                    </li>
+                    <li><a href="#" aria-label="Instagram"><img src="img/social/ins_logo.png" alt="" loading="lazy"></a>
+                    </li>
+                    <li><a href="#" aria-label="TikTok"><img src="img/social/tiktok_logo.png" alt="" loading="lazy"></a>
+                    </li>
                     <li><a href="#" aria-label="X"><img src="img/social/x_logo.png" alt="" loading="lazy"></a></li>
                 </ul>
             </div>

@@ -1,23 +1,29 @@
-// Booking form: fill "Activity of Interest" from booking.html?activity=...
+// Booking form: prefill the requested activity or membership from the URL.
 (() => {
-    const activity = new URLSearchParams(location.search).get("activity");
-    if (!activity) return;
-    let field = document.getElementById("activity") || document.querySelector('[name="activity"]');
-    if (!field) {
+    const params = new URLSearchParams(location.search);
+    const activity = params.get("activity");
+    const option = params.get("option");
+    const value = activity || option;
+    if (!value) return;
+
+    let field = activity
+        ? document.getElementById("activity") || document.querySelector('[name="activity"]')
+        : document.getElementById("option") || document.querySelector('[name="option"]');
+    if (!field && activity) {
         const label = [...document.querySelectorAll("label")].find((l) => /activity of interest/i.test(l.textContent));
         field = label && label.control;
     }
     if (!field) return;
     if (field.tagName === "SELECT") {
         // only pick an option that already exists, never create one from the URL
-        const wanted = activity.trim().toLowerCase();
+        const wanted = value.trim().toLowerCase();
         const opt = [...field.options].find(
             (o) => o.value.toLowerCase() === wanted || o.textContent.trim().toLowerCase() === wanted
         );
         if (!opt) return;
         field.value = opt.value;
     } else {
-        field.value = activity.replace(/[\u0000-\u001F\u007F]/g, " ").trim().slice(0, 80);
+        field.value = value.replace(/[\u0000-\u001F\u007F]/g, " ").trim().slice(0, 80);
     }
     field.dispatchEvent(new Event("input", { bubbles: true }));
 })();
