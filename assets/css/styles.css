@@ -156,7 +156,7 @@ a {
   padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem);
   background:
     linear-gradient(rgba(36, 48, 31, 0.72), rgba(36, 48, 31, 0.72)),
-    url("img/backgrounds/banner.jpg") center / cover;
+    url("../../img/backgrounds/banner.jpg") center / cover;
   color: var(--color-ivory);
   text-align: center;
 }
@@ -230,7 +230,7 @@ a {
       rgba(36, 48, 31, 0.8) 40%,
       rgba(36, 48, 31, 0.2) 75%,
       rgba(36, 48, 31, 0) 100%),
-    url("img/backgrounds/bg_1.png") center / cover no-repeat;
+    url("../../img/backgrounds/bg_1.png") center / cover no-repeat;
   background-color: var(--color-forest-dark);
   color: var(--color-ivory);
 }
@@ -305,7 +305,7 @@ a {
   .story-vision {
     background:
       linear-gradient(180deg, rgba(36, 48, 31, 0.82), rgba(36, 48, 31, 0.7)),
-      url("img/backgrounds/bg_1.png") 70% center / cover no-repeat;
+      url("../../img/backgrounds/bg_1.png") 70% center / cover no-repeat;
     background-color: var(--color-forest-dark);
   }
 }
@@ -318,7 +318,7 @@ a {
   padding: clamp(1rem, 4vw, 3rem);
   background:
     linear-gradient(rgba(20, 26, 18, 0.35), rgba(20, 26, 18, 0.35)),
-    url("img/backgrounds/bg_2.png") center / cover no-repeat;
+    url("../../img/backgrounds/bg_2.png") center / cover no-repeat;
   background-color: var(--color-forest-dark);
   color: var(--color-ivory);
 }
@@ -387,7 +387,7 @@ a {
   padding: clamp(1rem, 4vw, 3rem);
   background:
     linear-gradient(rgba(20, 26, 18, 0.25), rgba(20, 26, 18, 0.25)),
-    url("img/backgrounds/bg_3.jpeg") left center / cover no-repeat;
+    url("../../img/backgrounds/bg_3.jpeg") left center / cover no-repeat;
   background-color: var(--color-forest-dark);
   color: var(--color-ivory);
 }
@@ -461,7 +461,7 @@ a {
   padding: clamp(1rem, 4vw, 3rem);
   background:
     linear-gradient(rgba(24, 16, 10, 0.5), rgba(12, 8, 6, 0.62)),
-    url("img/backgrounds/bg_4.png") center / cover no-repeat;
+    url("../../img/backgrounds/bg_4.png") center / cover no-repeat;
   background-color: var(--color-forest-dark);
   color: var(--color-ivory);
 }
@@ -619,7 +619,7 @@ a {
       rgba(20, 17, 12, 0.78) 40%,
       rgba(20, 17, 12, 0.2) 75%,
       rgba(20, 17, 12, 0) 100%),
-    url("img/backgrounds/bg_1.png") center / cover no-repeat;
+    url("../../img/backgrounds/bg_1.png") center / cover no-repeat;
   background-color: var(--story-base);
 }
 
@@ -627,7 +627,7 @@ a {
   .story-vision {
     background:
       linear-gradient(180deg, rgba(20, 17, 12, 0.82), rgba(20, 17, 12, 0.7)),
-      url("img/backgrounds/bg_1.png") 70% center / cover no-repeat;
+      url("../../img/backgrounds/bg_1.png") 70% center / cover no-repeat;
     background-color: var(--story-base);
   }
 }
@@ -692,7 +692,7 @@ a {
   padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 6vw, 5rem);
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("img/backgrounds/bg_partner.jpeg") center 40% / cover no-repeat;
+    url("../../img/backgrounds/bg_partner.jpeg") center 40% / cover no-repeat;
   background-color: var(--color-forest-dark);
   color: var(--color-ivory);
   text-align: center;
@@ -751,7 +751,7 @@ a {
 .partner-flow {
   position: relative;
   isolation: isolate;
-  background: var(--color-forest-dark) url("img/backgrounds/bg_partner2.jpeg") center top / 100% auto repeat-y;
+  background: var(--color-forest-dark) url("../../img/backgrounds/bg_partner2.jpeg") center top / 100% auto repeat-y;
 }
 
 .partner-flow::before {
@@ -987,7 +987,7 @@ a {
   padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 6vw, 5rem);
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("img/backgrounds/bg_membership.jpeg") center / cover no-repeat;
+    url("../../img/backgrounds/bg_membership.jpeg") center / cover no-repeat;
   background-color: var(--color-forest-dark);
   color: var(--color-ivory);
   text-align: center;
@@ -1028,7 +1028,7 @@ a {
   isolation: isolate;
   scroll-margin-top: 7rem;
   padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1rem, 5vw, 4rem) clamp(4rem, 10vw, 8rem);
-  background: var(--color-forest-dark) url("img/backgrounds/bg_membership2.jpeg") center top / 100% auto repeat-y;
+  background: var(--color-forest-dark) url("../../img/backgrounds/bg_membership2.jpeg") center top / 100% auto repeat-y;
   color: var(--color-ivory);
 }
 
@@ -1111,20 +1111,20 @@ a {
 }
 
 .mem-card--bamboo {
-  background-image: url("img/membership/bamboo.jpeg");
+  background-image: url("../../img/membership/bamboo.jpeg");
 }
 
 .mem-card--wisteria {
-  background-image: url("img/membership/wisteria.jpeg");
+  background-image: url("../../img/membership/wisteria.jpeg");
 }
 
-/* Falls back to the green gradient until img/membership/bonsai.jpeg is added */
+/* Keep the green gradient as a fallback if the image cannot be loaded. */
 .mem-card--bonsai {
-  background-image: url("img/membership/bonsai.jpeg"), linear-gradient(160deg, #3b4a33 0%, #1d2619 100%);
+  background-image: url("../../img/membership/bonsai.jpeg"), linear-gradient(160deg, #3b4a33 0%, #1d2619 100%);
 }
 
 .mem-card--lotus {
-  background-image: url("img/membership/lotus.jpeg");
+  background-image: url("../../img/membership/lotus.jpeg");
   padding: clamp(1.5rem, 4vw, 2.25rem);
 }
 
@@ -1211,7 +1211,7 @@ a {
   justify-content: flex-end;
   min-height: clamp(22rem, 50vw, 38rem);
   padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 6vw, 5rem);
-  background: var(--color-forest-dark) url("img/backgrounds/bg_lotus.jpeg") center / cover no-repeat;
+  background: var(--color-forest-dark) url("../../img/backgrounds/bg_lotus.jpeg") center / cover no-repeat;
   color: var(--color-ivory);
 }
 
@@ -1807,7 +1807,7 @@ body {
   align-items: center;
   gap: clamp(1.5rem, 4vw, 2.5rem);
   padding: clamp(2rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2rem);
-  background: var(--color-forest-dark) url("img/backgrounds/bg_experience.jpeg") center / cover no-repeat;
+  background: var(--color-forest-dark) url("../../img/backgrounds/bg_experience.jpeg") center / cover no-repeat;
   color: var(--color-ivory);
   isolation: isolate;
 }
@@ -2025,7 +2025,7 @@ body {
   flex-direction: column;
   min-height: clamp(38rem, 80vw, 60rem);
   padding: clamp(2rem, 6vw, 4.5rem) 0 clamp(1.5rem, 5vw, 3rem);
-  background: #0b0b0a url("img/backgrounds/bg_journey.jpeg") center / cover no-repeat;
+  background: #0b0b0a url("../../img/backgrounds/bg_journey.jpeg") center / cover no-repeat;
   color: var(--color-ivory);
   isolation: isolate;
 }
@@ -2198,7 +2198,7 @@ body {
   display: flex;
   align-items: center;
   padding: clamp(1rem, 4vw, 4rem);
-  background: var(--color-forest-dark) url("img/home/craft.jpeg") center / cover no-repeat;
+  background: var(--color-forest-dark) url("../../img/home/craft.jpeg") center / cover no-repeat;
   isolation: isolate;
 }
 
@@ -2514,7 +2514,7 @@ body {
   padding: clamp(2.5rem, 7vw, 5rem) clamp(1rem, 5vw, 4rem) clamp(3rem, 8vw, 6rem);
   background:
     linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
-    url("img/backgrounds/bg_exp.jpeg") center / cover no-repeat;
+    url("../../img/backgrounds/bg_exp.jpeg") center / cover no-repeat;
   color: var(--color-ivory);
 }
 

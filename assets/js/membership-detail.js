@@ -1,4 +1,4 @@
-// Membership detail page: fills the card from ?plan=... and switches tabs in place.
+// Membership detail page: renders the selected plan and switches tabs in place.
 (() => {
     const card = document.getElementById("md-card");
     if (!card) return;

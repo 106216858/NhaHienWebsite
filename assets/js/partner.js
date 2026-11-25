@@ -1,4 +1,4 @@
-// Partners: category filter + name search
+// Partner page: category filter + name search.
 (() => {
     const results = document.getElementById("partner-results");
     if (!results) return;

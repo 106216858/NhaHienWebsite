@@ -1,22 +1,23 @@
 #!/usr/bin/env python3
-"""Fix every image path in the site so it matches where the files really are.
+"""Fix image paths in the site so they match the current asset locations.
 
-Put this file in the project folder (next to img/, index.html, styles.css) and run:
-    python reorganize_img.py --dry-run     (preview only)
-    python reorganize_img.py               (apply)
+Run from the project root:
+    python tools/rearrange.py --dry-run     (preview only)
+    python tools/rearrange.py               (apply)
 
 1. Any image still loose in img/ is moved into its subfolder (list below).
-2. Every img/... path in your .html, .css and .js files is rewritten to the
-   folder the file is actually in, so it works wherever you put your images.
+2. Image references in HTML, CSS and JavaScript are updated to their current
+   locations, with CSS paths made relative to each stylesheet.
 3. Paths that point to an image that does not exist are listed at the end.
 """
+import os
 import re
 import shutil
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 IMG = ROOT / "img"
 DRY = "--dry-run" in sys.argv
 
@@ -64,36 +65,47 @@ if DRY:
             where[name] = [f"img/{folder}/{name}"]
 
 pattern = re.compile(
-    r"img/(?:[A-Za-z0-9_\-]+/)*([A-Za-z0-9_.\-]+\.(?:jpe?g|png|gif|webp|svg|ico))",
+    r"(?:\.\./)*img/(?:[A-Za-z0-9_\-]+/)*([A-Za-z0-9_.\-]+\.(?:jpe?g|png|gif|webp|svg|ico))",
     re.IGNORECASE,
 )
 missing = set()
 duplicates = set()
 
-def fix(match):
+def fix(match, source):
     old, name = match.group(0), match.group(1)
     found = where.get(name)
     if not found:
         missing.add(old)
         return old
-    if len(found) > 1:
-        duplicates.add(name)
-        # keep the path if it is already one of the real locations
-        return old if old in found else found[0]
-    return found[0]
+    if source.suffix.lower() == ".css":
+        current_image = (source.parent / old).resolve()
+    else:
+        current_image = (ROOT / old).resolve()
+    image_path = next(
+        (image for image in found if (ROOT / image).resolve() == current_image),
+        None,
+    )
+    if image_path is None:
+        if len(found) > 1:
+            duplicates.add(name)
+        image_path = found[0]
+    if source.suffix.lower() == ".css":
+        return Path(os.path.relpath(ROOT / image_path, source.parent)).as_posix()
+    return image_path
 
 # 3. rewrite paths in html / css / js
-for path in sorted(ROOT.glob("*")):
-    if path.suffix.lower() not in {".html", ".css", ".js"}:
-        continue
-    with open(path, encoding="utf-8", newline="") as f:
-        text = f.read()
-    new = pattern.sub(fix, text)
-    if new != text:
-        print(f"paths updated in {path.name}")
-        if not DRY:
-            with open(path, "w", encoding="utf-8", newline="") as f:
-                f.write(new)
+for folder in (ROOT, ROOT / "assets" / "css", ROOT / "assets" / "js"):
+    for path in sorted(folder.glob("*")):
+        if path.suffix.lower() not in {".html", ".css", ".js"}:
+            continue
+        with open(path, encoding="utf-8", newline="") as f:
+            text = f.read()
+        new = pattern.sub(lambda match: fix(match, path), text)
+        if new != text:
+            print(f"paths updated in {path.relative_to(ROOT).as_posix()}")
+            if not DRY:
+                with open(path, "w", encoding="utf-8", newline="") as f:
+                    f.write(new)
 
 if missing:
     print("\nThese paths point to images that do not exist (add the file or fix the name):")

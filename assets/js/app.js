@@ -1,4 +1,4 @@
-// Booking form: prefill the requested activity or membership from the URL.
+// Prefill activity and membership enquiry selections from the URL.
 (() => {
     const params = new URLSearchParams(location.search);
     const activity = params.get("activity");

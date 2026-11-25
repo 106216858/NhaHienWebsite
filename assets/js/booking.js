@@ -1,4 +1,4 @@
-// Booking form: input safeguards and normalisation.
+// Enquiry form: input safeguards and normalisation.
 // This runs in the browser only. Repeat the same checks on the server that receives the form.
 (() => {
     const form = document.getElementById("booking-form");
