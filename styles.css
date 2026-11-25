@@ -882,8 +882,8 @@ a {
 
 /* Reserved space for the partner cards that will be added under the filters */
 .partner-results {
-  min-height: clamp(26rem, 70vw, 48rem);
-  margin-top: clamp(2.5rem, 7vw, 5rem);
+  min-height: clamp(12rem, 30vw, 20rem);
+  margin-top: clamp(2.5rem, 7vw, 4rem);
   text-align: left;
 }
 
@@ -976,6 +976,357 @@ a {
 
   .partner-network__logo {
     max-width: 14rem;
+  }
+}
+
+/* ===== Membership page ===== */
+.mem-hero {
+  display: grid;
+  place-items: center;
+  min-height: clamp(24rem, 52vw, 40rem);
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 6vw, 5rem);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("img/backgrounds/bg_membership.jpeg") center / cover no-repeat;
+  background-color: var(--color-forest-dark);
+  color: var(--color-ivory);
+  text-align: center;
+}
+
+.mem-hero__inner {
+  width: 100%;
+  max-width: 44rem;
+}
+
+.mem-hero__eyebrow {
+  margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+  color: var(--color-gold);
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mem-hero__title {
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.mem-hero__text {
+  font-size: clamp(1rem, 1.9vw, 1.25rem);
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.mem-explore {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1rem, 5vw, 4rem) clamp(4rem, 10vw, 8rem);
+  background: var(--color-forest-dark) url("img/backgrounds/bg_membership2.jpeg") center top / 100% auto repeat-y;
+  color: var(--color-ivory);
+}
+
+.mem-explore::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.mem-explore__inner {
+  max-width: 54rem;
+  margin-inline: auto;
+}
+
+.mem-explore__head {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.mem-explore__eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--color-gold);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mem-explore__lead {
+  max-width: 36rem;
+  font-size: clamp(0.95rem, 1.7vw, 1.15rem);
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Two staggered columns of cards */
+.mem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  align-items: start;
+}
+
+/* Two columns of cards with natural heights, so the layout stays staggered */
+.mem-col {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.mem-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(1.1rem, 2.5vw, 1.75rem);
+  background-color: rgba(20, 26, 18, 0.85);
+  box-shadow: var(--shadow-soft);
+}
+
+.mem-card--plain {
+  min-height: clamp(15rem, 26vw, 18rem);
+}
+
+.mem-card--photo {
+  aspect-ratio: 9 / 10;
+  min-height: 19rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mem-card--photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.72));
+}
+
+.mem-card--bamboo {
+  background-image: url("img/membership/bamboo.jpeg");
+}
+
+.mem-card--wisteria {
+  background-image: url("img/membership/wisteria.jpeg");
+}
+
+/* Falls back to the green gradient until img/membership/bonsai.jpeg is added */
+.mem-card--bonsai {
+  background-image: url("img/membership/bonsai.jpeg"), linear-gradient(160deg, #3b4a33 0%, #1d2619 100%);
+}
+
+.mem-card--lotus {
+  background-image: url("img/membership/lotus.jpeg");
+}
+
+.mem-card__tag {
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mem-card__name {
+  margin-bottom: 0.5rem;
+  color: var(--color-ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 3.8vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mem-card__term {
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+}
+
+.mem-card__price {
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.mem-card__more {
+  align-self: stretch;
+  margin-top: auto;
+  min-height: 3rem;
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+  background-color: rgba(60, 72, 52, 0.6);
+  border: 1px solid transparent;
+  color: var(--color-ivory);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color var(--ease), color var(--ease), border-color var(--ease);
+}
+
+.mem-card__more:hover,
+.mem-card__more:focus-visible {
+  border-color: var(--color-gold);
+  background-color: var(--color-gold);
+  color: var(--color-forest-dark);
+}
+
+/* Photo cards: tag and name at the top, term and price pushed down above a full-width button */
+.mem-card--photo .mem-card__term {
+  margin-top: auto;
+}
+
+.mem-card--photo .mem-card__more {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .mem-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mem-card--photo {
+    aspect-ratio: auto;
+    min-height: 20rem;
+  }
+}
+
+/* ===== Readability and ease of use (larger text, stronger contrast, clearer focus) ===== */
+body {
+  font-size: 1.0625rem;
+}
+
+.site-nav__link {
+  font-size: 0.9rem;
+}
+
+.site-footer__tagline,
+.site-footer__text {
+  font-size: 0.95rem;
+}
+
+.site-footer__links a {
+  font-size: 1rem;
+}
+
+.site-footer__bottom {
+  font-size: 0.85rem;
+}
+
+.site-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 0.5rem;
+}
+
+:focus-visible {
+  outline-width: 3px;
+}
+
+/* Make sure small print on photos stays readable */
+.mem-explore__lead,
+.mem-hero__text,
+.partner-hero__text,
+.partner-directory__lead {
+  font-weight: 600;
+}
+
+/* ===== Partner cards (uniform tiles for logos of any shape or colour) ===== */
+.partner-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+  align-content: start;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background-color: rgba(20, 17, 12, 0.72);
+  box-shadow: var(--shadow-soft);
+  color: var(--color-ivory);
+  text-decoration: none;
+}
+
+/* Every logo gets the same frame, whatever its own size or background */
+.partner-card[hidden] {
+  display: none;
+}
+
+.partner-card__logo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  flex: none;
+  overflow: hidden;
+  background-color: var(--color-ivory);
+}
+
+/* Logos are pre-sized to the same 4:3 tile, with their own breathing room */
+.partner-card__logo img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* white logo backgrounds melt into the ivory frame */
+  mix-blend-mode: multiply;
+}
+
+/* Logos with a dark or coloured background keep their own colour */
+.partner-card--solid .partner-card__logo img {
+  mix-blend-mode: normal;
+}
+
+.partner-card--contain-logo .partner-card__logo img {
+  object-fit: contain;
+}
+
+.partner-empty {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.partner-card__body {
+  padding: 0.8rem 1rem 1rem;
+}
+
+.partner-card__name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.partner-card__category {
+  margin-top: 0.2rem;
+  color: rgba(243, 235, 221, 0.72);
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+@media (max-width: 560px) {
+  .partner-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partner-card__name {
+    font-size: 0.95rem;
   }
 }
 

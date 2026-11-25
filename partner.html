@@ -7,8 +7,11 @@
   <title>Our Partners | Nhã Hiên</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="img/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="512x512" href="img/brand/favicon-512.png">
@@ -41,54 +44,259 @@
       </div>
     </section>
     <div class="partner-flow">
-    <section class="partner-network" aria-label="A considered network">
-      <div class="partner-network__inner reveal">
-        <p class="partner-network__eyebrow">A considered network</p>
-        <div class="partner-network__frame">
-          <div class="partner-network__panel">
-            <h2 class="partner-network__title">
-              Excellence in
-              <span>every experience.</span>
-            </h2>
-            <p class="partner-network__text">From Vietnamese craftsmanship and culinary discovery to inclusive design
-              and wellbeing, our proposed partner network reflects the standards behind the Nhã Hiên experience.</p>
+      <section class="partner-network" aria-label="A considered network">
+        <div class="partner-network__inner reveal">
+          <p class="partner-network__eyebrow">A considered network</p>
+          <div class="partner-network__frame">
+            <div class="partner-network__panel">
+              <h2 class="partner-network__title">
+                Excellence in
+                <span>every experience.</span>
+              </h2>
+              <p class="partner-network__text">From Vietnamese craftsmanship and culinary discovery to inclusive design
+                and wellbeing, our proposed partner network reflects the standards behind the Nhã Hiên experience.</p>
+            </div>
+            <div class="partner-network__logo">
+              <img src="img/brand/logo-ivory.png" alt="Nhã Hiên">
+            </div>
           </div>
-          <div class="partner-network__logo">
-            <img src="img/brand/logo-ivory.png" alt="Nhã Hiên">
+        </div>
+      </section>
+      <section class="partner-directory" aria-label="Our selected network">
+        <div class="partner-directory__inner reveal">
+          <h2 class="partner-directory__title">Meet Our Selected Network</h2>
+          <p class="partner-directory__lead">Explore the organisations and specialists shortlisted to support our
+            experiences and operations.</p>
+          <form class="partner-search" role="search" onsubmit="return false">
+            <label class="visually-hidden" for="partner-search">Search partners</label>
+            <input class="partner-search__input" id="partner-search" type="search" name="q"
+              placeholder="Search partners" autocomplete="off">
+          </form>
+          <div class="partner-filter" role="group" aria-label="Filter partners by category">
+            <button class="partner-filter__btn is-active" type="button" data-filter="all" aria-pressed="true">All
+              Partners</button>
+            <button class="partner-filter__btn" type="button" data-filter="experience-culture"
+              aria-pressed="false">Experience &amp; Culture</button>
+            <button class="partner-filter__btn" type="button" data-filter="accessibility-design"
+              aria-pressed="false">Accessibility &amp; Design</button>
+            <button class="partner-filter__btn" type="button" data-filter="wellbeing-safety"
+              aria-pressed="false">Wellbeing &amp; Safety</button>
+            <button class="partner-filter__btn" type="button" data-filter="culinary-materials"
+              aria-pressed="false">Culinary &amp; Materials</button>
+            <button class="partner-filter__btn" type="button" data-filter="professional-services"
+              aria-pressed="false">Professional Services</button>
           </div>
+          <div class="partner-results" id="partner-results" aria-live="polite">
+            <article class="partner-card partner-card--solid" data-category="experience-culture"
+              data-name="park hyatt saigon">
+              <div class="partner-card__logo"><img src="img/partners/park-hyatt-saigon.jpg" alt="Park Hyatt Saigon logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Park Hyatt Saigon</h3>
+                <p class="partner-card__category">Experience &amp; Culture</p>
+              </div>
+            </article>
+            <article class="partner-card partner-card--solid" data-category="experience-culture" data-name="vun art">
+              <div class="partner-card__logo"><img src="img/partners/vun-art.jpg" alt="VUN Art logo" loading="lazy">
+              </div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">VUN Art</h3>
+                <p class="partner-card__category">Experience &amp; Culture</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="experience-culture" data-name="trà việt">
+              <div class="partner-card__logo"><img src="img/partners/tra-viet.jpg" alt="Trà Việt logo" loading="lazy">
+              </div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Trà Việt</h3>
+                <p class="partner-card__category">Experience &amp; Culture</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="experience-culture" data-name="hướng nghiệp á âu">
+              <div class="partner-card__logo"><img src="img/partners/huong-nghiep-a-au.jpg" alt="Hướng Nghiệp Á Âu logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Hướng Nghiệp Á Âu</h3>
+                <p class="partner-card__category">Experience &amp; Culture</p>
+              </div>
+            </article>
+            <article class="partner-card partner-card--solid" data-category="experience-culture" data-name="thai cong">
+              <div class="partner-card__logo"><img src="img/partners/thaicong.jpg" alt="Thái Công Interior Design logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Thái Công</h3>
+                <p class="partner-card__category">Experience &amp; Culture</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="accessibility-design" data-name="drd">
+              <div class="partner-card__logo"><img src="img/partners/drd.jpg" alt="DrD logo" loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">DrD</h3>
+                <p class="partner-card__category">Accessibility &amp; Design</p>
+              </div>
+            </article>
+            <article class="partner-card partner-card--solid" data-category="accessibility-design"
+              data-name="out-2 design group">
+              <div class="partner-card__logo"><img src="img/partners/out-2-design.jpg" alt="Out-2 Design Group logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Out-2 Design Group</h3>
+                <p class="partner-card__category">Accessibility &amp; Design</p>
+              </div>
+            </article>
+            <article class="partner-card partner-card--solid" data-category="accessibility-design"
+              data-name="boydens vietnam">
+              <div class="partner-card__logo"><img src="img/partners/boydens-vietnam.jpg" alt="Boydens Vietnam logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Boydens Vietnam</h3>
+                <p class="partner-card__category">Accessibility &amp; Design</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="accessibility-design" data-name="phi thai vn">
+              <div class="partner-card__logo"><img src="img/partners/phithaivn.jpg" alt="Phi Thai VN logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Phi Thái (VN)</h3>
+                <p class="partner-card__category">Accessibility &amp; Design</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="accessibility-design" data-name="okamura">
+              <div class="partner-card__logo"><img src="img/partners/okamura.jpg" alt="Okamura logo" loading="lazy">
+              </div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Okamura</h3>
+                <p class="partner-card__category">Accessibility &amp; Design</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="accessibility-design" data-name="fursys">
+              <div class="partner-card__logo"><img src="img/partners/fursys.jpg" alt="Fursys logo" loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Fursys</h3>
+                <p class="partner-card__category">Accessibility &amp; Design</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="wellbeing-safety" data-name="fv hospital">
+              <div class="partner-card__logo"><img src="img/partners/fv-hospital.jpg" alt="FV Hospital logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">FV Hospital</h3>
+                <p class="partner-card__category">Wellbeing &amp; Safety</p>
+              </div>
+            </article>
+            <article class="partner-card partner-card--solid" data-category="wellbeing-safety"
+              data-name="fmp healthcare group">
+              <div class="partner-card__logo"><img src="img/partners/fmp-healthcare.jpg" alt="FMP Healthcare Group logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">FMP Healthcare Group</h3>
+                <p class="partner-card__category">Wellbeing &amp; Safety</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="wellbeing-safety" data-name="nutrihome">
+              <div class="partner-card__logo"><img src="img/partners/nutrihome.jpg" alt="Nutrihome logo" loading="lazy">
+              </div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Nutrihome</h3>
+                <p class="partner-card__category">Wellbeing &amp; Safety</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="wellbeing-safety" data-name="bwt best water technology">
+              <div class="partner-card__logo"><img src="img/partners/bwt.jpg" alt="BWT Best Water Technology logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">BWT Best Water Technology</h3>
+                <p class="partner-card__category">Wellbeing &amp; Safety</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="culinary-materials" data-name="lý gia viên">
+              <div class="partner-card__logo"><img src="img/partners/ly-gia-vien.jpg" alt="Lý Gia Viên logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Lý Gia Viên</h3>
+                <p class="partner-card__category">Culinary &amp; Materials</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="culinary-materials" data-name="noritake">
+              <div class="partner-card__logo"><img src="img/partners/noritake.jpg" alt="Noritake logo" loading="lazy">
+              </div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Noritake</h3>
+                <p class="partner-card__category">Culinary &amp; Materials</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="culinary-materials" data-name="minh long i">
+              <div class="partner-card__logo"><img src="img/partners/minh-long-i.jpg" alt="Minh Long I logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Minh Long I</h3>
+                <p class="partner-card__category">Culinary &amp; Materials</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="culinary-materials" data-name="organica">
+              <div class="partner-card__logo"><img src="img/partners/organica.jpg" alt="Organica logo" loading="lazy">
+              </div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Organica</h3>
+                <p class="partner-card__category">Culinary &amp; Materials</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="culinary-materials" data-name="dalat hasfarm">
+              <div class="partner-card__logo"><img src="img/partners/dalat-hasfarm.jpg" alt="Dalat Hasfarm logo"
+                  loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Dalat Hasfarm</h3>
+                <p class="partner-card__category">Culinary &amp; Materials</p>
+              </div>
+            </article>
+            <article class="partner-card partner-card--solid" data-category="culinary-materials"
+              data-name="classic fine foods">
+              <div class="partner-card__logo"><img src="img/partners/classic-fine-foods.jpg"
+                  alt="Classic Fine Foods logo" loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Classic Fine Foods</h3>
+                <p class="partner-card__category">Culinary &amp; Materials</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="professional-services" data-name="pwc">
+              <div class="partner-card__logo"><img src="img/partners/pwc.jpg" alt="PwC logo" loading="lazy"></div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">PwC</h3>
+                <p class="partner-card__category">Professional Services</p>
+              </div>
+            </article>
+            <article class="partner-card partner-card--contain-logo" data-category="professional-services"
+              data-name="callsys">
+              <div class="partner-card__logo"><img src="img/partners/callsys.jpg" alt="CallSys logo" loading="lazy">
+              </div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">CallSys</h3>
+                <p class="partner-card__category">Professional Services</p>
+              </div>
+            </article>
+            <article class="partner-card" data-category="professional-services" data-name="xanh sm">
+              <div class="partner-card__logo"><img src="img/partners/xanh-sm.jpg" alt="Xanh SM logo" loading="lazy">
+              </div>
+              <div class="partner-card__body">
+                <h3 class="partner-card__name">Xanh SM</h3>
+                <p class="partner-card__category">Professional Services</p>
+              </div>
+            </article>
+          </div>
+          <p class="partner-empty" id="partner-empty" hidden>No partners match your search. Try another name or
+            category.</p>
         </div>
-      </div>
-    </section>
-    <section class="partner-directory" aria-label="Our selected network">
-      <div class="partner-directory__inner reveal">
-        <h2 class="partner-directory__title">Meet Our Selected Network</h2>
-        <p class="partner-directory__lead">Explore the organisations and specialists shortlisted to support our
-          experiences and operations.</p>
-        <form class="partner-search" role="search" onsubmit="return false">
-          <label class="visually-hidden" for="partner-search">Search partners</label>
-          <input class="partner-search__input" id="partner-search" type="search" name="q" placeholder="Search partners" autocomplete="off">
-        </form>
-        <div class="partner-filter" role="group" aria-label="Filter partners by category">
-          <button class="partner-filter__btn is-active" type="button" data-filter="all" aria-pressed="true">All Partners</button>
-          <button class="partner-filter__btn" type="button" data-filter="experience-culture" aria-pressed="false">Experience &amp; Culture</button>
-          <button class="partner-filter__btn" type="button" data-filter="accessibility-design" aria-pressed="false">Accessibility &amp; Design</button>
-          <button class="partner-filter__btn" type="button" data-filter="wellbeing-safety" aria-pressed="false">Wellbeing &amp; Safety</button>
-          <button class="partner-filter__btn" type="button" data-filter="culinary-materials" aria-pressed="false">Culinary &amp; Materials</button>
-          <button class="partner-filter__btn" type="button" data-filter="professional-services" aria-pressed="false">Professional Services</button>
-        </div>
-        <div class="partner-results" id="partner-results" aria-live="polite">
-          <!-- Partner cards (logo, name, details) will go here -->
-        </div>
-      </div>
-    </section>
+      </section>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div class="site-footer__brand">
-        <a href="index.html" aria-label="Nhã Hiên home"><img class="site-footer__logo" src="img/brand/logo.png" alt="Nhã Hiên"></a>
-        <p class="site-footer__tagline">A space for new discoveries, meaningful connections and beautiful everyday moments.</p>
+        <a href="index.html" aria-label="Nhã Hiên home"><img class="site-footer__logo" src="img/brand/logo.png"
+            alt="Nhã Hiên"></a>
+        <p class="site-footer__tagline">A space for new discoveries, meaningful connections and beautiful everyday
+          moments.</p>
       </div>
       <nav class="site-footer__col" aria-label="Explore">
         <h2 class="site-footer__heading">Explore</h2>
@@ -111,7 +319,8 @@
         <h2 class="site-footer__heading">Contact us</h2>
         <form class="footer-form" id="footer-form" novalidate>
           <label class="visually-hidden" for="footer-email">Email address</label>
-          <input class="footer-form__input" id="footer-email" type="email" name="email" placeholder="Your email" autocomplete="email" required>
+          <input class="footer-form__input" id="footer-email" type="email" name="email" placeholder="Your email"
+            autocomplete="email" required>
           <button class="footer-form__button" type="submit" aria-label="Send">&rarr;</button>
         </form>
         <p class="footer-form__status" role="status" aria-live="polite"></p>
@@ -124,10 +333,13 @@
         </ul>
       </div>
     </div>
-    <div class="site-footer__bottom"><p>&copy; 2026 Nhã Hiên. All rights reserved.</p></div>
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 Nhã Hiên. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="app.js"></script>
+  <script src="partner.js"></script>
 </body>
 
 </html>
