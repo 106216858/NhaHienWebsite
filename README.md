@@ -56,7 +56,3 @@ File names are case-sensitive on GitHub, so image paths must match exactly.
 
 - The enquiry form and the footer email form do not send data anywhere yet. They need a backend or a form service, and the checks in `booking.js` must be repeated on the server.
 - Partner cards, pricing and some copy are placeholders for the competition.
-
-## Team
-
-To be added.
