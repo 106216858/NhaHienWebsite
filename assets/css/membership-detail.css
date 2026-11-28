@@ -13,7 +13,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: var(--md-section-overlay, rgba(0, 0, 0, 0.3));
+    background: var(--md-section-overlay, rgba(0, 0, 0, 0.5));
 }
 
 .md__inner {

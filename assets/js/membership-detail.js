@@ -120,7 +120,6 @@
             duration: "12 months",
             allocation: "144 sessions",
             sectionBg: "img/membership/lotus.jpeg",
-            sectionOverlay: "rgba(0, 0, 0, 0.42)",
             eligibility: "Reserved for the Top 20 eligible members who renew at least six months before their current membership expires. Renewal is subject to confirmation and availability.",
             details: [
                 "144 sessions",
@@ -169,7 +168,10 @@
     }
     fillList("md-details", plan.details);
     const section = card.closest(".md");
-    if (plan.sectionBg) section.style.setProperty("--md-section-bg", 'url("' + plan.sectionBg + '")');
+    if (plan.sectionBg) {
+        const sectionBg = new URL(plan.sectionBg, document.baseURI).href;
+        section.style.setProperty("--md-section-bg", 'url("' + sectionBg + '")');
+    }
     if (plan.sectionPosition) section.style.setProperty("--md-section-position", plan.sectionPosition);
     if (plan.sectionOverlay) section.style.setProperty("--md-section-overlay", plan.sectionOverlay);
     document.title = plan.name + " | Membership | Nhã Hiên";
